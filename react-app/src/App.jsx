@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
+import Logo from './components/Logo';
 import { 
   shuffle, 
   ensureEvenWithBye, 
@@ -213,13 +214,22 @@ function App() {
     return list;
   };
 
+  const resetToDefaults = () => {
+    if (confirm('Reset to default players and decks? This will clear your current tournament.')) {
+      importTournamentObject(DEFAULT_TOURNAMENT);
+    }
+  };
+
   const sortedPlayers = Object.entries(results.players).sort((a, b) => b[1] - a[1]);
   const sortedDecks = Object.entries(results.decks).sort((a, b) => b[1] - a[1]);
   const playerView = getPlayerView();
 
   return (
     <div className="container">
-      <h1>Tournament Bracket Generator</h1>
+      <h1>
+        <Logo theme={theme} />
+        <span>Tournament Bracket Generator</span>
+      </h1>
 
       <section className="row">
         <div className="card">
@@ -232,6 +242,9 @@ function App() {
               accept="application/json"
               onChange={(e) => importState(e.target.files && e.target.files[0])}
             />
+            <button onClick={resetToDefaults} style={{ marginLeft: 'auto' }}>
+              Reset to Defaults
+            </button>
           </div>
         </div>
 

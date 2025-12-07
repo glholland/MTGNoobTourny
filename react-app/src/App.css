@@ -62,6 +62,17 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
 }
 
 h2 {
@@ -234,9 +245,10 @@ input[type="file"] {
 
 textarea {
   width: 100%;
-  min-height: 100px;
+  min-height: 80px;
+  max-height: 150px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: inherit;
   color: rgba(255, 255, 255, 0.87);
   background-color: rgba(255, 255, 255, 0.05);
@@ -244,6 +256,8 @@ textarea {
   border-radius: 6px;
   margin-bottom: 10px;
   resize: vertical;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 textarea:focus {
@@ -290,10 +304,15 @@ label {
 ul, ol {
   padding-left: 20px;
   margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  word-wrap: break-word;
 }
 
 li {
   margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Grid View Styles */
