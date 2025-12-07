@@ -19,12 +19,19 @@ function App() {
   const [deckInput, setDeckInput] = useState('');
   const [selectedPlayer, setSelectedPlayer] = useState('');
   const [deckHistory, setDeckHistory] = useState({});
+  const [theme, setTheme] = useState('default');
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'tree'
   const importFileRef = useRef(null);
 
   // Load default tournament on mount
   useEffect(() => {
     importTournamentObject(DEFAULT_TOURNAMENT);
   }, []);
+
+  // Apply theme to body
+  useEffect(() => {
+    document.body.className = `theme-${theme}`;
+  }, [theme]);
 
   const importTournamentObject = (obj) => {
     setPlayers(Array.isArray(obj.players) ? obj.players : []);
@@ -267,6 +274,24 @@ function App() {
         <div className="card">
           <h2>Options</h2>
           <label>
+            Theme:
+            <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+              <option value="default">Default</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="black">Black</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+          </label>
+          <label>
+            View Mode:
+            <select value={viewMode} onChange={(e) => setViewMode(e.target.value)}>
+              <option value="grid">Grid View</option>
+              <option value="tree">Tree View</option>
+            </select>
+          </label>
+          <label>
             Tournament type:
             <select value={tournamentType} onChange={(e) => setTournamentType(e.target.value)}>
               <option value="single">Single Elimination</option>
@@ -282,43 +307,88 @@ function App() {
       </section>
 
       <section id="bracketArea">
-        {rounds.map((roundMatches, rIdx) => (
-          <div key={rIdx} className="card">
-            <h3>Round {rIdx + 1}</h3>
-            <div className="grid">
-              {roundMatches.map((m, mIdx) => (
-                <div key={mIdx} className="match">
-                  <div>
-                    <strong>{m.p1}</strong> <span className="muted">({m.c1})</span>
-                  </div>
-                  <div>vs</div>
-                  <div>
-                    <strong>{m.p2}</strong> <span className="muted">({m.c2})</span>
-                  </div>
-                  {m.p1 === 'BYE' || m.p2 === 'BYE' ? (
-                    <div className="muted">BYE - No winner assigned</div>
-                  ) : (
-                    <div className="match-btns">
-                      <button
-                        onClick={() => pickWinner(rIdx, mIdx, m.p1, m.c1)}
-                        disabled={!!m.winner}
-                      >
-                        Winner: {m.p1}
-                      </button>
-                      <button
-                        onClick={() => pickWinner(rIdx, mIdx, m.p2, m.c2)}
-                        disabled={!!m.winner}
-                      >
-                        Winner: {m.p2}
-                      </button>
+        {viewMode === 'grid' ? (
+          // Grid view - existing layout
+          rounds.map((roundMatches, rIdx) => (
+            <div key={rIdx} className="card">
+              <h3>Round {rIdx + 1}</h3>
+              <div className="grid">
+                {roundMatches.map((m, mIdx) => (
+                  <div key={mIdx} className="match">
+                    <div>
+                      <strong>{m.p1}</strong> <span className="muted">({m.c1})</span>
                     </div>
-                  )}
-                  {m.winner && <div className="winner">Winner: {m.winner}</div>}
-                </div>
-              ))}
+                    <div>vs</div>
+                    <div>
+                      <strong>{m.p2}</strong> <span className="muted">({m.c2})</span>
+                    </div>
+                    {m.p1 === 'BYE' || m.p2 === 'BYE' ? (
+                      <div className="muted">BYE - No winner assigned</div>
+                    ) : (
+                      <div className="match-btns">
+                        <button
+                          onClick={() => pickWinner(rIdx, mIdx, m.p1, m.c1)}
+                          disabled={!!m.winner}
+                        >
+                          Winner: {m.p1}
+                        </button>
+                        <button
+                          onClick={() => pickWinner(rIdx, mIdx, m.p2, m.c2)}
+                          disabled={!!m.winner}
+                        >
+                          Winner: {m.p2}
+                        </button>
+                      </div>
+                    )}
+                    {m.winner && <div className="winner">Winner: {m.winner}</div>}
+                  </div>
+                ))}
+              </div>
             </div>
+          ))
+        ) : (
+          // Tree view - horizontal bracket layout
+          <div className="tree-bracket">
+            {rounds.map((roundMatches, rIdx) => (
+              <div key={rIdx} className="tree-round">
+                <h3>Round {rIdx + 1}</h3>
+                <div className="tree-matches">
+                  {roundMatches.map((m, mIdx) => (
+                    <div key={mIdx} className="tree-match">
+                      <div className="tree-match-content">
+                        <div className="tree-player">
+                          <strong>{m.p1}</strong>
+                          <span className="muted">({m.c1})</span>
+                        </div>
+                        <div className="tree-player">
+                          <strong>{m.p2}</strong>
+                          <span className="muted">({m.c2})</span>
+                        </div>
+                      </div>
+                      {m.p1 !== 'BYE' && m.p2 !== 'BYE' && !m.winner && (
+                        <div className="tree-match-btns">
+                          <button
+                            onClick={() => pickWinner(rIdx, mIdx, m.p1, m.c1)}
+                            className="tree-btn"
+                          >
+                            ✓
+                          </button>
+                          <button
+                            onClick={() => pickWinner(rIdx, mIdx, m.p2, m.c2)}
+                            className="tree-btn"
+                          >
+                            ✓
+                          </button>
+                        </div>
+                      )}
+                      {m.winner && <div className="tree-winner">→ {m.winner}</div>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </section>
 
       <section className="card">
