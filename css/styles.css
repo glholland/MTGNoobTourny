@@ -260,3 +260,79 @@ footer {
     border: 1px solid #f99;
     color: #a00;
 }
+
+.static-text p,
+.static-text ul,
+.static-text li {
+    margin: 4px 0;
+    font-size: 1rem;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 6px 0;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: #374151;
+    width: 180px;
+}
+
+.schedule-desc {
+    color: #111827;
+}
+
+.tourney-notes {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #1f2937;
+}
+
+.tourney-notes .intro {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.tourney-notes .notes-section {
+    margin: 16px 0;
+    padding: 12px 14px;
+    background: #f9fafb;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+}
+
+.tourney-notes h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+    color: #1e3a8a;
+}
+
+.tourney-notes h4 {
+    margin: 10px 0 4px 0;
+    font-size: 1.05rem;
+    color: #334155;
+}
+
+.tourney-notes ul {
+    margin: 6px 0 6px 20px;
+}
+
+.tourney-notes li {
+    margin-bottom: 4px;
+}
+
+.tourney-notes .subnote {
+    margin-top: 6px;
+    font-style: italic;
+    color: #4b5563;
+}

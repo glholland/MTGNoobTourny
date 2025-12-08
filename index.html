@@ -12,13 +12,101 @@
     <div class="container">
         <h1>Tournament Bracket Generator</h1>
         <div id="tabs">
-            <button class="tab-btn active" data-tab="tab-bracket">Bracket View</button>
+			<button class="tab-btn active" data-tab="tab-notes">Notes & Schedule</button>
+            <button class="tab-btn" data-tab="tab-bracket">Bracket View</button>
             <button class="tab-btn" data-tab="tab-player">Player View</button>
             <button class="tab-btn" data-tab="tab-generate">Generate</button>
         </div>
+		
+<div class="tab-content active" id="tab-notes">
+
+<div class="card">
+    <h2>Tournament Notes</h2>
+
+    <div id="notesBox" class="tourney-notes">
+
+        <p class="intro">
+            Hello all! I purchased 7,000 bulk Magic The Gathering cards and want to host a double-tournament.
+        </p>
+
+        <div class="notes-section">
+            <h3>How the Event Works</h3>
+            <ul>
+                <li><strong>Step 1:</strong> Strong MTG players will <strong>Draft</strong> or <strong>Timed Free-Build</strong> one Standard deck using the bulk.</li>
+                <li><strong>Step 2:</strong> New / low-skill MTG players will play those decks in a <strong>Round Robin tournament</strong>.  
+                    Decks are randomized each round as evenly as possible.</li>
+                <li><strong>Scoring:</strong>  
+                    <ul>
+                        <li>Builders earn <strong>1 point for every tournament win their deck achieves</strong>.</li>
+                        <li>Players earn <strong>1 point per match win</strong>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="notes-section">
+            <h3>Prize Pools</h3>
+
+            <h4>New Players</h4>
+            <ul>
+                <li><strong>1st:</strong> Choose any built deck + MTG Starter Kit</li>
+                <li><strong>2nd:</strong> Choose any remaining built deck</li>
+            </ul>
+
+            <h4>Builders</h4>
+            <ul>
+                <li><strong>1st & 2nd:</strong> A bottle of booze or MTG prize (TBD)</li>
+            </ul>
+
+            <p class="subnote">
+                All built decks can be purchased afterward for <strong>$10</strong> (negotiable).  
+                All money goes toward funding this and future tournaments.
+            </p>
+        </div>
+    </div>
+</div>
 
 
-        <div class="tab-content active" id="tab-bracket">
+    <div class="card">
+        <h2>Schedule of Events</h2>
+        <div id="scheduleBox" class="schedule-list">
+            <div class="schedule-item">
+                <span class="schedule-time">11:45 AM -> 12:30 PM</span>
+                <span class="schedule-desc">Lite Lunch + Deck Building for those that missed Wednesday</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="schedule-time">12:30 PM –> 12:40 PM</span>
+                <span class="schedule-desc">Rules Overview</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="schedule-time">12:40 PM –> 2:30 PM</span>
+                <span class="schedule-desc">Rounds 1–5</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="schedule-time">2:30 PM</span>
+                <span class="schedule-desc">Snack Break if you want it</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="schedule-time">2:30 PM –> 5:00 PM</span>
+                <span class="schedule-desc">Rounds 6-11</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="schedule-time">5:00 PM</span>
+                <span class="schedule-desc">Tiebreakers & Awards</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+        <div class="tab-content" id="tab-bracket">
             <h2>Tournament Bracket</h2>
 
             <section id="bracketArea"></section>
