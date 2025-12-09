@@ -48,9 +48,9 @@
       return copy;
   };
   const DEFAULT_TOURNAMENT = {
-        "players": [
+  "players": [
     "Adlai",
-    "Brett",
+    "Marina",
     "Aaron Saunders",
     "Kate Kemichick",
     "Kelsey Lumsden",
@@ -71,8 +71,8 @@
     "Jacob F2",
     "Jacob F3",
     "Daryl",
-    "Deck 1",
-    "Deck 2",
+    "Tyler Stefancin",
+    "Brett",
     "Deck 3",
     "Deck 4"
   ],
@@ -82,43 +82,43 @@
       {
         "p1": "Adlai",
         "p2": "Patricia Huang",
-        "c1": "Jacob F2",
-        "c2": "Deck 2",
+        "c1": "Jacob",
+        "c2": "Deck 4",
         "winner": null
       },
       {
-        "p1": "Brett",
+        "p1": "Marina",
         "p2": "Alex Zettler",
-        "c1": "Jacob",
-        "c2": "Jacob F1",
+        "c1": "Jason Kemichick",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Sophia Abraham",
-        "c1": "Jason Kemichick",
-        "c2": "Sean Kirschke",
+        "c1": "Jacob F2",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Rick Pease",
-        "c1": "Deck 3",
-        "c2": "Daryl",
+        "c1": "Brett",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
         "p2": "Patrick Kenny",
-        "c1": "Jacob F3",
-        "c2": "Deck 4",
+        "c1": "Sean Kirschke",
+        "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Garrett",
         "p2": "Maddy Goodman",
         "c1": "Trav",
-        "c2": "Deck 1",
+        "c2": "Jacob F1",
         "winner": null
       }
     ],
@@ -126,43 +126,43 @@
       {
         "p1": "Adlai",
         "p2": "Alex Zettler",
-        "c1": "Jacob",
-        "c2": "Deck 2",
+        "c1": "Jason Kemichick",
+        "c2": "Deck 4",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Sophia Abraham",
-        "c1": "Daryl",
-        "c2": "Jacob F1",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
-        "p1": "Brett",
+        "p1": "Marina",
         "p2": "Rick Pease",
-        "c1": "Deck 3",
-        "c2": "Jason Kemichick",
+        "c1": "Jacob F2",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Patrick Kenny",
-        "c1": "Jacob F3",
-        "c2": "Deck 1",
+        "c1": "Brett",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Maddy Goodman",
         "c1": "Sean Kirschke",
-        "c2": "Deck 4",
+        "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
         "p2": "Garrett",
-        "c1": "Jacob F2",
-        "c2": "Trav",
+        "c1": "Trav",
+        "c2": "Jacob F1",
         "winner": null
       }
     ],
@@ -170,43 +170,43 @@
       {
         "p1": "Adlai",
         "p2": "Sophia Abraham",
-        "c1": "Deck 1",
-        "c2": "Jason Kemichick",
+        "c1": "Jacob F2",
+        "c2": "Deck 4",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Rick Pease",
-        "c1": "Daryl",
-        "c2": "Deck 3",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Patrick Kenny",
-        "c1": "Trav",
-        "c2": "Jacob F1",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
-        "p1": "Brett",
+        "p1": "Marina",
         "p2": "Maddy Goodman",
-        "c1": "Jacob F3",
-        "c2": "Deck 4",
+        "c1": "Brett",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Garrett",
-        "c1": "Jacob F2",
-        "c2": "Sean Kirschke",
+        "c1": "Sean Kirschke",
+        "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Kelsey Lumsden",
-        "c1": "Deck 2",
-        "c2": "Jacob",
+        "c1": "Trav",
+        "c2": "Jacob F1",
         "winner": null
       }
     ],
@@ -214,43 +214,43 @@
       {
         "p1": "Adlai",
         "p2": "Rick Pease",
-        "c1": "Daryl",
-        "c2": "Jacob F2",
+        "c1": "Brett",
+        "c2": "Deck 4",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Patrick Kenny",
-        "c1": "Deck 4",
-        "c2": "Jason Kemichick",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Maddy Goodman",
-        "c1": "Deck 2",
+        "c1": "Jason Kemichick",
         "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Garrett",
-        "c1": "Trav",
-        "c2": "Jacob F1",
+        "c1": "Jacob F2",
+        "c2": "Deck 3",
         "winner": null
       },
       {
-        "p1": "Brett",
+        "p1": "Marina",
         "p2": "Kelsey Lumsden",
-        "c1": "Deck 3",
-        "c2": "Jacob",
+        "c1": "Sean Kirschke",
+        "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Kate Kemichick",
-        "c1": "Deck 1",
-        "c2": "Sean Kirschke",
+        "c1": "Trav",
+        "c2": "Jacob F1",
         "winner": null
       }
     ],
@@ -258,41 +258,85 @@
       {
         "p1": "Adlai",
         "p2": "Patrick Kenny",
-        "c1": "Jacob",
-        "c2": "Jacob F3",
+        "c1": "Sean Kirschke",
+        "c2": "Deck 4",
         "winner": null
       },
       {
         "p1": "Rick Pease",
         "p2": "Maddy Goodman",
-        "c1": "Daryl",
-        "c2": "Jason Kemichick",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Garrett",
-        "c1": "Deck 2",
-        "c2": "Trav",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Kelsey Lumsden",
         "c1": "Jacob F2",
-        "c2": "Deck 1",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Kate Kemichick",
-        "c1": "Deck 3",
+        "c1": "Brett",
+        "c2": "Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Marina",
+        "p2": "Aaron Saunders",
+        "c1": "Trav",
+        "c2": "Jacob F1",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Maddy Goodman",
+        "c1": "Trav",
         "c2": "Deck 4",
         "winner": null
       },
       {
-        "p1": "Brett",
+        "p1": "Patrick Kenny",
+        "p2": "Garrett",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
+        "winner": null
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Kelsey Lumsden",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
+        "winner": null
+      },
+      {
+        "p1": "Sophia Abraham",
+        "p2": "Kate Kemichick",
+        "c1": "Jacob F2",
+        "c2": "Deck 3",
+        "winner": null
+      },
+      {
+        "p1": "Alex Zettler",
         "p2": "Aaron Saunders",
+        "c1": "Brett",
+        "c2": "Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Patricia Huang",
+        "p2": "Marina",
         "c1": "Sean Kirschke",
         "c2": "Jacob F1",
         "winner": null
@@ -301,88 +345,44 @@
     [
       {
         "p1": "Adlai",
-        "p2": "Maddy Goodman",
-        "c1": "Daryl",
-        "c2": "Jason Kemichick",
-        "winner": null
-      },
-      {
-        "p1": "Patrick Kenny",
         "p2": "Garrett",
-        "c1": "Deck 1",
-        "c2": "Trav",
-        "winner": null
-      },
-      {
-        "p1": "Rick Pease",
-        "p2": "Kelsey Lumsden",
-        "c1": "Deck 2",
-        "c2": "Jacob F1",
-        "winner": null
-      },
-      {
-        "p1": "Sophia Abraham",
-        "p2": "Kate Kemichick",
-        "c1": "Deck 4",
-        "c2": "Jacob F2",
-        "winner": null
-      },
-      {
-        "p1": "Alex Zettler",
-        "p2": "Aaron Saunders",
-        "c1": "Jacob F3",
-        "c2": "Sean Kirschke",
-        "winner": null
-      },
-      {
-        "p1": "Patricia Huang",
-        "p2": "Brett",
-        "c1": "Deck 3",
-        "c2": "Jacob",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
-        "p2": "Garrett",
-        "c1": "Jacob F3",
-        "c2": "Deck 4",
-        "winner": null
-      },
-      {
-        "p1": "Maddy Goodman",
-        "p2": "Kelsey Lumsden",
-        "c1": "Jacob",
-        "c2": "Sean Kirschke",
-        "winner": null
-      },
-      {
-        "p1": "Patrick Kenny",
-        "p2": "Kate Kemichick",
         "c1": "Jacob F1",
-        "c2": "Jacob F2",
+        "c2": "Deck 4",
+        "winner": null
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Kelsey Lumsden",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
+        "winner": null
+      },
+      {
+        "p1": "Patrick Kenny",
+        "p2": "Kate Kemichick",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Rick Pease",
         "p2": "Aaron Saunders",
-        "c1": "Deck 2",
-        "c2": "Trav",
+        "c1": "Jacob F2",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
-        "p2": "Brett",
-        "c1": "Jason Kemichick",
+        "p2": "Marina",
+        "c1": "Brett",
         "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Patricia Huang",
-        "c1": "Deck 3",
-        "c2": "Deck 1",
+        "c1": "Sean Kirschke",
+        "c2": "Trav",
         "winner": null
       }
     ],
@@ -390,130 +390,42 @@
       {
         "p1": "Adlai",
         "p2": "Kelsey Lumsden",
-        "c1": "Jason Kemichick",
-        "c2": "Daryl",
+        "c1": "Daryl",
+        "c2": "Deck 4",
         "winner": null
       },
       {
         "p1": "Garrett",
         "p2": "Kate Kemichick",
-        "c1": "Jacob F1",
-        "c2": "Jacob F3",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
         "winner": null
       },
       {
         "p1": "Maddy Goodman",
         "p2": "Aaron Saunders",
-        "c1": "Deck 2",
-        "c2": "Jacob F2",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
         "winner": null
       },
       {
         "p1": "Patrick Kenny",
-        "p2": "Brett",
-        "c1": "Deck 1",
-        "c2": "Sean Kirschke",
+        "p2": "Marina",
+        "c1": "Jacob F2",
+        "c2": "Deck 3",
         "winner": null
       },
       {
         "p1": "Rick Pease",
         "p2": "Patricia Huang",
-        "c1": "Trav",
-        "c2": "Deck 4",
+        "c1": "Brett",
+        "c2": "Jacob F1",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Alex Zettler",
-        "c1": "Jacob",
-        "c2": "Deck 3",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
-        "p2": "Kate Kemichick",
-        "c1": "Daryl",
-        "c2": "Jacob F1",
-        "winner": null
-      },
-      {
-        "p1": "Kelsey Lumsden",
-        "p2": "Aaron Saunders",
-        "c1": "Deck 2",
-        "c2": "Jacob",
-        "winner": null
-      },
-      {
-        "p1": "Garrett",
-        "p2": "Brett",
-        "c1": "Deck 3",
-        "c2": "Deck 4",
-        "winner": null
-      },
-      {
-        "p1": "Maddy Goodman",
-        "p2": "Patricia Huang",
-        "c1": "Jacob F2",
-        "c2": "Deck 1",
-        "winner": null
-      },
-      {
-        "p1": "Patrick Kenny",
-        "p2": "Alex Zettler",
-        "c1": "Trav",
-        "c2": "Sean Kirschke",
-        "winner": null
-      },
-      {
-        "p1": "Rick Pease",
-        "p2": "Sophia Abraham",
-        "c1": "Jacob F3",
-        "c2": "Jason Kemichick",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
-        "p2": "Aaron Saunders",
-        "c1": "Jason Kemichick",
-        "c2": "Deck 4",
-        "winner": null
-      },
-      {
-        "p1": "Kate Kemichick",
-        "p2": "Brett",
-        "c1": "Jacob",
-        "c2": "Jacob F1",
-        "winner": null
-      },
-      {
-        "p1": "Kelsey Lumsden",
-        "p2": "Patricia Huang",
-        "c1": "Jacob F2",
-        "c2": "Daryl",
-        "winner": null
-      },
-      {
-        "p1": "Garrett",
-        "p2": "Alex Zettler",
         "c1": "Sean Kirschke",
-        "c2": "Deck 2",
-        "winner": null
-      },
-      {
-        "p1": "Maddy Goodman",
-        "p2": "Sophia Abraham",
-        "c1": "Jacob F3",
-        "c2": "Deck 3",
-        "winner": null
-      },
-      {
-        "p1": "Patrick Kenny",
-        "p2": "Rick Pease",
-        "c1": "Deck 1",
         "c2": "Trav",
         "winner": null
       }
@@ -521,44 +433,132 @@
     [
       {
         "p1": "Adlai",
-        "p2": "Brett",
+        "p2": "Kate Kemichick",
+        "c1": "Deck 3",
+        "c2": "Deck 4",
+        "winner": null
+      },
+      {
+        "p1": "Kelsey Lumsden",
+        "p2": "Aaron Saunders",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
+        "winner": null
+      },
+      {
+        "p1": "Garrett",
+        "p2": "Marina",
+        "c1": "Jason Kemichick",
+        "c2": "Jacob F3",
+        "winner": null
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Patricia Huang",
+        "c1": "Jacob F2",
+        "c2": "Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Patrick Kenny",
+        "p2": "Alex Zettler",
+        "c1": "Brett",
+        "c2": "Jacob F1",
+        "winner": null
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Sophia Abraham",
+        "c1": "Sean Kirschke",
+        "c2": "Trav",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Aaron Saunders",
+        "c1": "Jacob F3",
+        "c2": "Deck 4",
+        "winner": null
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Marina",
+        "c1": "Jacob",
+        "c2": "Tyler Stefancin",
+        "winner": null
+      },
+      {
+        "p1": "Kelsey Lumsden",
+        "p2": "Patricia Huang",
         "c1": "Jason Kemichick",
         "c2": "Deck 3",
         "winner": null
       },
       {
-        "p1": "Aaron Saunders",
-        "p2": "Patricia Huang",
-        "c1": "Deck 4",
-        "c2": "Jacob F1",
-        "winner": null
-      },
-      {
-        "p1": "Kate Kemichick",
-        "p2": "Alex Zettler",
-        "c1": "Deck 1",
-        "c2": "Jacob F2",
-        "winner": null
-      },
-      {
-        "p1": "Kelsey Lumsden",
-        "p2": "Sophia Abraham",
-        "c1": "Trav",
-        "c2": "Sean Kirschke",
-        "winner": null
-      },
-      {
         "p1": "Garrett",
-        "p2": "Rick Pease",
-        "c1": "Jacob",
+        "p2": "Alex Zettler",
+        "c1": "Jacob F2",
         "c2": "Daryl",
         "winner": null
       },
       {
         "p1": "Maddy Goodman",
+        "p2": "Sophia Abraham",
+        "c1": "Brett",
+        "c2": "Jacob F1",
+        "winner": null
+      },
+      {
+        "p1": "Patrick Kenny",
+        "p2": "Rick Pease",
+        "c1": "Sean Kirschke",
+        "c2": "Trav",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Marina",
+        "c1": "Tyler Stefancin",
+        "c2": "Deck 4",
+        "winner": null
+      },
+      {
+        "p1": "Aaron Saunders",
+        "p2": "Patricia Huang",
+        "c1": "Jacob",
+        "c2": "Jacob F3",
+        "winner": null
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Alex Zettler",
+        "c1": "Jason Kemichick",
+        "c2": "Deck 3",
+        "winner": null
+      },
+      {
+        "p1": "Kelsey Lumsden",
+        "p2": "Sophia Abraham",
+        "c1": "Jacob F2",
+        "c2": "Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Garrett",
+        "p2": "Rick Pease",
+        "c1": "Brett",
+        "c2": "Jacob F1",
+        "winner": null
+      },
+      {
+        "p1": "Maddy Goodman",
         "p2": "Patrick Kenny",
-        "c1": "Jacob F3",
-        "c2": "Deck 2",
+        "c1": "Sean Kirschke",
+        "c2": "Trav",
         "winner": null
       }
     ]

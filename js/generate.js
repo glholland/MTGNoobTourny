@@ -21,7 +21,7 @@ function generateSingleElim(initialPlayers) {
     return [matches];
 }
 
-function generateRoundRobin(playersList) {
+/* function generateRoundRobin(playersList) {
     const temp = playersList.slice();
     if (temp.length % 2 === 1) temp.push("BYE");
 
@@ -83,7 +83,59 @@ function generateRoundRobin(playersList) {
     }
 
     return roundsLocal;
+}*/
+
+function generateRoundRobin(playersList) {
+    const N = playersList.length;
+
+    // Must have equal number of decks
+    if (decks.length !== N) {
+        alert("You must have exactly as many decks as players for no-repeat mode.");
+        return [];
+    }
+
+    // FIXED unchanging player order
+    const fixedPlayers = playersList.slice();
+
+    // ROTATING list for pairings only
+    const rotating = playersList.slice();
+    if (rotating.length % 2 === 1) rotating.push("BYE");
+
+    // Randomize deck starting order ONCE
+    const deckOrder = shuffle([...decks]);
+
+    const roundsLocal = [];
+
+    for (let r = 0; r < N - 1; r++) {
+        const roundMatches = [];
+
+        for (let i = 0; i < N / 2; i++) {
+            const p1 = rotating[i];
+            const p2 = rotating[N - 1 - i];
+
+            const idx1 = fixedPlayers.indexOf(p1);
+            const idx2 = fixedPlayers.indexOf(p2);
+
+            const d1 = p1 === "BYE" ? "No deck" : deckOrder[(idx1 + r) % N];
+            const d2 = p2 === "BYE" ? "No deck" : deckOrder[(idx2 + r) % N];
+
+            roundMatches.push({
+                p1, p2,
+                c1: d1,
+                c2: d2,
+                winner: null
+            });
+        }
+
+        roundsLocal.push(roundMatches);
+
+        // Standard Round-Robin rotation for PAIRINGS ONLY
+        rotating.splice(1, 0, rotating.pop());
+    }
+
+    return roundsLocal;
 }
+
 
 
 // Match generation ensuring deck uniqueness per round

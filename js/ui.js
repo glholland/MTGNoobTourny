@@ -25,7 +25,7 @@ function refreshLists() {
 
             players[index] = newName.trim();
             refreshLists();
-            saveTournamentState(); // updates saved pre-tournament state
+            saveTournamentState();
         });
 
         const deleteBtn = document.createElement("button");
@@ -46,11 +46,7 @@ function refreshLists() {
         playerList.appendChild(row);
     });
 
-    /* ---------------------------
-       DECKS
-    ---------------------------- */
-    deckList.innerHTML = "";
-
+    // --- DECK LIST ---
     decks.forEach((d, index) => {
         const row = document.createElement("div");
         row.className = "list-item";
@@ -87,7 +83,15 @@ function refreshLists() {
 
         deckList.appendChild(row);
     });
+
+    // --- PLAYER VIEW DROPDOWN ---
+    if (typeof playerViewSelect !== "undefined" && playerViewSelect) {
+        playerViewSelect.innerHTML =
+            `<option value="">-- choose --</option>` +
+            players.map(p => `<option value="${p}">${p}</option>`).join("");
+    }
 }
+
 
 
   function updateLeaderboards() {
