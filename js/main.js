@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         // Otherwise load default from external file
         console.log("Loading DEFAULT tournament from file...");
         try {
-            const response = await fetch('default_tournament.json');
+            const response = await fetch('tournament_data.json');
             if (! response.ok) {
                 throw new Error(`HTTP error! status: ${response. status}`);
             }
