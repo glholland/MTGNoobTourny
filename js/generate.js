@@ -21,70 +21,6 @@ function generateSingleElim(initialPlayers) {
     return [matches];
 }
 
-/* function generateRoundRobin(playersList) {
-    const temp = playersList.slice();
-    if (temp.length % 2 === 1) temp.push("BYE");
-
-    const roundsLocal = [];
-    const n = temp.length;
-
-    // Initialize global deck usage counter
-    deckUseCount = {};
-    decks.forEach(d => deckUseCount[d] = 0);
-
-    // Deck assignment function using GLOBAL balancing
-    function getDeckForPlayer(player) {
-        if (player === "BYE") return "No deck";
-
-        // Convert deckUseCount into sortable list
-        const entries = Object.entries(deckUseCount);
-
-        // Find MIN usage count among all decks
-        const minUse = Math.min(...entries.map(([_, c]) => c));
-
-        // Build list of all decks tied for minimum usage
-        const leastUsedDecks = entries
-            .filter(([_, c]) => c === minUse)
-            .map(([d, _]) => d);
-
-        // Randomly choose from them
-        const chosen = leastUsedDecks[Math.floor(Math.random() * leastUsedDecks.length)];
-
-        // Update global deck usage count
-        deckUseCount[chosen]++;
-
-        return chosen;
-    }
-
-    // Generate full Round Robin pairings
-    for (let r = 0; r < n - 1; r++) {
-        const roundMatches = [];
-
-        for (let i = 0; i < n / 2; i++) {
-            const p1 = temp[i];
-            const p2 = temp[n - 1 - i];
-
-            const c1 = getDeckForPlayer(p1);
-            const c2 = getDeckForPlayer(p2);
-
-            roundMatches.push({
-                p1,
-                p2,
-                c1,
-                c2,
-                winner: null
-            });
-        }
-
-        roundsLocal.push(roundMatches);
-
-        // Standard Round Robin rotation (keep index 0 fixed)
-        temp.splice(1, 0, temp.pop());
-    }
-
-    return roundsLocal;
-}*/
-
 function generateRoundRobin(playersList) {
     const N = playersList.length;
 
@@ -161,15 +97,24 @@ function pickWinner(roundIndex, matchIndex, winner, deck) {
     if (match.winner) return;
 
     // Prevent picking a winner for BYE matches
-    if (match.p1 === 'BYE' || match.p2 === 'BYE') return;
+    if (match. p1 === 'BYE' || match.p2 === 'BYE') return;
 
     // Set winner
     match.winner = winner;
 
-    // Update results
+    // Update winner results
     results.players[winner] = (results.players[winner] || 0) + 1;
     if (deck && deck !== 'No deck') {
         results.decks[deck] = (results.decks[deck] || 0) + 1;
+    }
+
+    // Track loser (THIS IS THE NEW PART!)
+    const loser = (winner === match.p1) ? match.p2 : match.p1;
+    const loserDeck = (winner === match.p1) ? match.c2 : match.c1;
+    
+    results.playerLosses[loser] = (results.playerLosses[loser] || 0) + 1;
+    if (loserDeck && loserDeck !== 'No deck') {
+        results.deckLosses[loserDeck] = (results.deckLosses[loserDeck] || 0) + 1;
     }
 
     // Handle advancement for single elimination
@@ -197,28 +142,34 @@ function pickWinner(roundIndex, matchIndex, winner, deck) {
     renderPlayerView();
     saveTournamentState();
     renderDeckMatrix();
-
 }
 
 function undoWinner(roundIndex, matchIndex) {
     const match = rounds[roundIndex][matchIndex];
-    if (!match.winner) return;
+    if (!match. winner) return;
 
     const previousWinner = match.winner;
+    const previousLoser = (previousWinner === match.p1) ? match.p2 : match.p1;
+    const loserDeck = (previousWinner === match.p1) ? match.c2 : match.c1;
 
-    // Remove the player's win
-    if (results.players[previousWinner]) {
+    // Remove winner's win
+    if (results. players[previousWinner]) {
         results.players[previousWinner]--;
-        if (results.players[previousWinner] <= 0) {
-            delete results.players[previousWinner];
+        if (results. players[previousWinner] <= 0) {
+            delete results. players[previousWinner];
         }
     }
 
-    // Remove the deck's win
-    const usedDeck =
-        previousWinner === match.p1 ? match.c1 :
-        previousWinner === match.p2 ? match.c2 : null;
+    // Remove loser's loss
+    if (results.playerLosses[previousLoser]) {
+        results.playerLosses[previousLoser]--;
+        if (results.playerLosses[previousLoser] <= 0) {
+            delete results.playerLosses[previousLoser];
+        }
+    }
 
+    // Remove winner deck's win
+    const usedDeck = previousWinner === match.p1 ? match.c1 :  match.c2;
     if (usedDeck && usedDeck !== 'No deck') {
         if (results.decks[usedDeck]) {
             results.decks[usedDeck]--;
@@ -228,9 +179,17 @@ function undoWinner(roundIndex, matchIndex) {
         }
     }
 
-    // Clear winner
-    match.winner = null;
+    // Remove loser deck's loss
+    if (loserDeck && loserDeck !== 'No deck') {
+        if (results.deckLosses[loserDeck]) {
+            results.deckLosses[loserDeck]--;
+            if (results. deckLosses[loserDeck] <= 0) {
+                delete results.deckLosses[loserDeck];
+            }
+        }
+    }
 
+    match.winner = null;
     updateLeaderboards();
     renderBracket();
     renderPlayerView();

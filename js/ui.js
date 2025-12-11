@@ -94,22 +94,26 @@ function refreshLists() {
 
 
 
-  function updateLeaderboards() {
-      playerLeaderboard.innerHTML = '';
-      deckLeaderboard.innerHTML = '';
-      const sortedPlayers = Object.entries(results.players).sort((a, b) => b[1] - a[1]);
-      sortedPlayers.forEach(([p, w]) => {
-          const li = document.createElement('li');
-          li.textContent = `${p}: ${w} win(s)`;
-          playerLeaderboard.appendChild(li);
-      });
-      const sorteddecks = Object.entries(results.decks).sort((a, b) => b[1] - a[1]);
-      sorteddecks.forEach(([c, w]) => {
-          const li = document.createElement('li');
-          li.textContent = `${c}: ${w} win(s)`;
-          deckLeaderboard.appendChild(li);
-      });
-  }
+function updateLeaderboards() {
+    playerLeaderboard.innerHTML = '';
+    deckLeaderboard. innerHTML = '';
+    
+    const sortedPlayers = Object.entries(results.players).sort((a, b) => b[1] - a[1]);
+    sortedPlayers.forEach(([p, w]) => {
+        const li = document.createElement('li');
+        const losses = results.playerLosses[p] || 0;
+        li. textContent = `${p}: ${w}W-${losses}L`;
+        playerLeaderboard.appendChild(li);
+    });
+    
+    const sorteddecks = Object.entries(results.decks).sort((a, b) => b[1] - a[1]);
+    sorteddecks.forEach(([c, w]) => {
+        const li = document.createElement('li');
+        const losses = results. deckLosses[c] || 0;
+        li. textContent = `${c}: ${w}W-${losses}L`;
+        deckLeaderboard.appendChild(li);
+    });
+}
 
   // Render bracket rounds
   function renderBracket() {

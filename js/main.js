@@ -40,12 +40,29 @@ function loadSavedTournamentState() {
    INITIALIZATION ON PAGE LOAD
 -------------------------------------------------*/
 
-window.addEventListener("DOMContentLoaded", () => {
+/* -----------------------------------------------
+   INITIALIZATION ON PAGE LOAD
+-------------------------------------------------*/
+
+window.addEventListener("DOMContentLoaded", async () => {
     // Try to load saved tournament first
     if (!loadSavedTournamentState()) {
-        // Otherwise load default
-        console.log("Loading DEFAULT tournament...");
-        importTournamentObject(DEFAULT_TOURNAMENT);
+        // Otherwise load default from external file
+        console.log("Loading DEFAULT tournament from file...");
+        try {
+            const response = await fetch('default_tournament.json');
+            if (! response.ok) {
+                throw new Error(`HTTP error! status: ${response. status}`);
+            }
+            const defaultTournament = await response.json();
+            console.log("Loaded default tournament:", defaultTournament);
+            importTournamentObject(defaultTournament);
+        } catch (error) {
+            console. error("Could not load default tournament file:", error);
+            console.log("Using fallback empty tournament");
+            // Fallback to empty tournament from DEFAULT_TOURNAMENT constant
+            importTournamentObject(DEFAULT_TOURNAMENT);
+        }
     }
 
     refreshLists();
@@ -80,9 +97,11 @@ generateBtn.addEventListener('click', () => {
     }
 
     results = {
-        players: {},
-        decks: {}
-    };
+    players: {},
+    decks: {},
+    playerLosses: {},
+    deckLosses: {}
+};
     tiebreakers = {
         first: null,
         second: null,
@@ -100,9 +119,11 @@ resetBtn.addEventListener('click', () => {
     decks = [];
     rounds = [];
     results = {
-        players: {},
-        decks: {}
-    };
+    players: {},
+    decks: {},
+    playerLosses: {},
+    deckLosses: {}
+};
     tiebreakers = {
         first: null,
         second: null,
