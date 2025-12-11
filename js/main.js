@@ -51,14 +51,14 @@ window.addEventListener("DOMContentLoaded", async () => {
         console.log("Loading DEFAULT tournament from file...");
         try {
             const response = await fetch('tournament_data.json');
-            if (! response.ok) {
+            if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response. status}`);
             }
             const defaultTournament = await response.json();
             console.log("Loaded default tournament:", defaultTournament);
             importTournamentObject(defaultTournament);
         } catch (error) {
-            console. error("Could not load default tournament file:", error);
+            console.error("Could not load default tournament file:", error);
             console.log("Using fallback empty tournament");
             // Fallback to empty tournament from DEFAULT_TOURNAMENT constant
             importTournamentObject(DEFAULT_TOURNAMENT);
@@ -97,11 +97,11 @@ generateBtn.addEventListener('click', () => {
     }
 
     results = {
-    players: {},
-    decks: {},
-    playerLosses: {},
-    deckLosses: {}
-};
+        players: {},
+        decks: {},
+        playerLosses: {},
+        deckLosses: {}
+    };
     tiebreakers = {
         first: null,
         second: null,
@@ -119,11 +119,11 @@ resetBtn.addEventListener('click', () => {
     decks = [];
     rounds = [];
     results = {
-    players: {},
-    decks: {},
-    playerLosses: {},
-    deckLosses: {}
-};
+        players: {},
+        decks: {},
+        playerLosses: {},
+        deckLosses: {}
+    };
     tiebreakers = {
         first: null,
         second: null,

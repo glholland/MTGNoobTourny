@@ -1,119 +1,119 @@
   // UI updates
-function refreshLists() {
-    // Update numeric counts
-    document.getElementById("playerCount").textContent = players.length;
-    document.getElementById("deckCount").textContent = decks.length;
+  function refreshLists() {
+      // Update numeric counts
+      document.getElementById("playerCount").textContent = players.length;
+      document.getElementById("deckCount").textContent = decks.length;
 
-    // Clear list display
-    playerList.innerHTML = "";
-    deckList.innerHTML = "";
+      // Clear list display
+      playerList.innerHTML = "";
+      deckList.innerHTML = "";
 
-    // --- PLAYERS LIST ---
-    players.forEach((p, index) => {
-        const row = document.createElement("div");
-        row.className = "list-item";
+      // --- PLAYERS LIST ---
+      players.forEach((p, index) => {
+          const row = document.createElement("div");
+          row.className = "list-item";
 
-        const label = document.createElement("span");
-        label.textContent = p;
+          const label = document.createElement("span");
+          label.textContent = p;
 
-        const editBtn = document.createElement("button");
-        editBtn.className = "mini-btn";
-        editBtn.textContent = "Edit";
-        editBtn.addEventListener("click", () => {
-            const newName = prompt("Rename player:", p);
-            if (!newName || newName.trim() === "" || newName === p) return;
+          const editBtn = document.createElement("button");
+          editBtn.className = "mini-btn";
+          editBtn.textContent = "Edit";
+          editBtn.addEventListener("click", () => {
+              const newName = prompt("Rename player:", p);
+              if (!newName || newName.trim() === "" || newName === p) return;
 
-            players[index] = newName.trim();
-            refreshLists();
-            saveTournamentState();
-        });
+              players[index] = newName.trim();
+              refreshLists();
+              saveTournamentState();
+          });
 
-        const deleteBtn = document.createElement("button");
-        deleteBtn.className = "mini-btn danger";
-        deleteBtn.textContent = "Delete";
-        deleteBtn.addEventListener("click", () => {
-            if (!confirm(`Remove player "${p}"?`)) return;
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "mini-btn danger";
+          deleteBtn.textContent = "Delete";
+          deleteBtn.addEventListener("click", () => {
+              if (!confirm(`Remove player "${p}"?`)) return;
 
-            players.splice(index, 1);
-            refreshLists();
-            saveTournamentState();
-        });
+              players.splice(index, 1);
+              refreshLists();
+              saveTournamentState();
+          });
 
-        row.appendChild(label);
-        row.appendChild(editBtn);
-        row.appendChild(deleteBtn);
+          row.appendChild(label);
+          row.appendChild(editBtn);
+          row.appendChild(deleteBtn);
 
-        playerList.appendChild(row);
-    });
+          playerList.appendChild(row);
+      });
 
-    // --- DECK LIST ---
-    decks.forEach((d, index) => {
-        const row = document.createElement("div");
-        row.className = "list-item";
+      // --- DECK LIST ---
+      decks.forEach((d, index) => {
+          const row = document.createElement("div");
+          row.className = "list-item";
 
-        const label = document.createElement("span");
-        label.textContent = d;
+          const label = document.createElement("span");
+          label.textContent = d;
 
-        const editBtn = document.createElement("button");
-        editBtn.className = "mini-btn";
-        editBtn.textContent = "Edit";
-        editBtn.addEventListener("click", () => {
-            const newName = prompt("Rename deck:", d);
-            if (!newName || newName.trim() === "" || newName === d) return;
+          const editBtn = document.createElement("button");
+          editBtn.className = "mini-btn";
+          editBtn.textContent = "Edit";
+          editBtn.addEventListener("click", () => {
+              const newName = prompt("Rename deck:", d);
+              if (!newName || newName.trim() === "" || newName === d) return;
 
-            decks[index] = newName.trim();
-            refreshLists();
-            saveTournamentState();
-        });
+              decks[index] = newName.trim();
+              refreshLists();
+              saveTournamentState();
+          });
 
-        const deleteBtn = document.createElement("button");
-        deleteBtn.className = "mini-btn danger";
-        deleteBtn.textContent = "Delete";
-        deleteBtn.addEventListener("click", () => {
-            if (!confirm(`Remove deck "${d}"?`)) return;
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "mini-btn danger";
+          deleteBtn.textContent = "Delete";
+          deleteBtn.addEventListener("click", () => {
+              if (!confirm(`Remove deck "${d}"?`)) return;
 
-            decks.splice(index, 1);
-            refreshLists();
-            saveTournamentState();
-        });
+              decks.splice(index, 1);
+              refreshLists();
+              saveTournamentState();
+          });
 
-        row.appendChild(label);
-        row.appendChild(editBtn);
-        row.appendChild(deleteBtn);
+          row.appendChild(label);
+          row.appendChild(editBtn);
+          row.appendChild(deleteBtn);
 
-        deckList.appendChild(row);
-    });
+          deckList.appendChild(row);
+      });
 
-    // --- PLAYER VIEW DROPDOWN ---
-    if (typeof playerViewSelect !== "undefined" && playerViewSelect) {
-        playerViewSelect.innerHTML =
-            `<option value="">-- choose --</option>` +
-            players.map(p => `<option value="${p}">${p}</option>`).join("");
-    }
-}
+      // --- PLAYER VIEW DROPDOWN ---
+      if (typeof playerViewSelect !== "undefined" && playerViewSelect) {
+          playerViewSelect.innerHTML =
+              `<option value="">-- choose --</option>` +
+              players.map(p => `<option value="${p}">${p}</option>`).join("");
+      }
+  }
 
 
 
-function updateLeaderboards() {
-    playerLeaderboard.innerHTML = '';
-    deckLeaderboard. innerHTML = '';
-    
-    const sortedPlayers = Object.entries(results.players).sort((a, b) => b[1] - a[1]);
-    sortedPlayers.forEach(([p, w]) => {
-        const li = document.createElement('li');
-        const losses = results.playerLosses[p] || 0;
-        li. textContent = `${p}: ${w}W-${losses}L`;
-        playerLeaderboard.appendChild(li);
-    });
-    
-    const sorteddecks = Object.entries(results.decks).sort((a, b) => b[1] - a[1]);
-    sorteddecks.forEach(([c, w]) => {
-        const li = document.createElement('li');
-        const losses = results. deckLosses[c] || 0;
-        li. textContent = `${c}: ${w}W-${losses}L`;
-        deckLeaderboard.appendChild(li);
-    });
-}
+  function updateLeaderboards() {
+      playerLeaderboard.innerHTML = '';
+      deckLeaderboard.innerHTML = '';
+
+      const sortedPlayers = Object.entries(results.players).sort((a, b) => b[1] - a[1]);
+      sortedPlayers.forEach(([p, w]) => {
+          const li = document.createElement('li');
+          const losses = results.playerLosses[p] || 0;
+          li.textContent = `${p}: ${w}W-${losses}L`;
+          playerLeaderboard.appendChild(li);
+      });
+
+      const sorteddecks = Object.entries(results.decks).sort((a, b) => b[1] - a[1]);
+      sorteddecks.forEach(([c, w]) => {
+          const li = document.createElement('li');
+          const losses = results.deckLosses[c] || 0;
+          li.textContent = `${c}: ${w}W-${losses}L`;
+          deckLeaderboard.appendChild(li);
+      });
+  }
 
   // Render bracket rounds
   function renderBracket() {
@@ -280,20 +280,20 @@ function updateLeaderboards() {
           row.innerHTML = html;
           table.appendChild(row);
       });
-	  
-	      const totalRow = document.createElement("tr");
-    let totalHTML = `<td><strong>Total</strong></td>`;
 
-    decks.forEach(d => {
-        let total = 0;
-        players.forEach(p => {
-            total += usage[p][d];
-        });
-        totalHTML += `<td class="usage-total"><strong>${total}</strong></td>`;
-    });
+      const totalRow = document.createElement("tr");
+      let totalHTML = `<td><strong>Total</strong></td>`;
 
-    totalRow.innerHTML = totalHTML;
-    table.appendChild(totalRow);
+      decks.forEach(d => {
+          let total = 0;
+          players.forEach(p => {
+              total += usage[p][d];
+          });
+          totalHTML += `<td class="usage-total"><strong>${total}</strong></td>`;
+      });
+
+      totalRow.innerHTML = totalHTML;
+      table.appendChild(totalRow);
 
       container.appendChild(table);
   }

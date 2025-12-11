@@ -56,7 +56,8 @@ function generateRoundRobin(playersList) {
             const d2 = p2 === "BYE" ? "No deck" : deckOrder[(idx2 + r) % N];
 
             roundMatches.push({
-                p1, p2,
+                p1,
+                p2,
                 c1: d1,
                 c2: d2,
                 winner: null
@@ -97,7 +98,7 @@ function pickWinner(roundIndex, matchIndex, winner, deck) {
     if (match.winner) return;
 
     // Prevent picking a winner for BYE matches
-    if (match. p1 === 'BYE' || match.p2 === 'BYE') return;
+    if (match.p1 === 'BYE' || match.p2 === 'BYE') return;
 
     // Set winner
     match.winner = winner;
@@ -111,7 +112,7 @@ function pickWinner(roundIndex, matchIndex, winner, deck) {
     // Track loser (THIS IS THE NEW PART!)
     const loser = (winner === match.p1) ? match.p2 : match.p1;
     const loserDeck = (winner === match.p1) ? match.c2 : match.c1;
-    
+
     results.playerLosses[loser] = (results.playerLosses[loser] || 0) + 1;
     if (loserDeck && loserDeck !== 'No deck') {
         results.deckLosses[loserDeck] = (results.deckLosses[loserDeck] || 0) + 1;
@@ -146,17 +147,17 @@ function pickWinner(roundIndex, matchIndex, winner, deck) {
 
 function undoWinner(roundIndex, matchIndex) {
     const match = rounds[roundIndex][matchIndex];
-    if (!match. winner) return;
+    if (!match.winner) return;
 
     const previousWinner = match.winner;
     const previousLoser = (previousWinner === match.p1) ? match.p2 : match.p1;
     const loserDeck = (previousWinner === match.p1) ? match.c2 : match.c1;
 
     // Remove winner's win
-    if (results. players[previousWinner]) {
+    if (results.players[previousWinner]) {
         results.players[previousWinner]--;
-        if (results. players[previousWinner] <= 0) {
-            delete results. players[previousWinner];
+        if (results.players[previousWinner] <= 0) {
+            delete results.players[previousWinner];
         }
     }
 
@@ -169,7 +170,7 @@ function undoWinner(roundIndex, matchIndex) {
     }
 
     // Remove winner deck's win
-    const usedDeck = previousWinner === match.p1 ? match.c1 :  match.c2;
+    const usedDeck = previousWinner === match.p1 ? match.c1 : match.c2;
     if (usedDeck && usedDeck !== 'No deck') {
         if (results.decks[usedDeck]) {
             results.decks[usedDeck]--;
@@ -183,7 +184,7 @@ function undoWinner(roundIndex, matchIndex) {
     if (loserDeck && loserDeck !== 'No deck') {
         if (results.deckLosses[loserDeck]) {
             results.deckLosses[loserDeck]--;
-            if (results. deckLosses[loserDeck] <= 0) {
+            if (results.deckLosses[loserDeck] <= 0) {
                 delete results.deckLosses[loserDeck];
             }
         }

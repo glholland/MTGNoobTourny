@@ -3,12 +3,12 @@
   let decks = [];
   let tournamentType = 'single';
   let rounds = []; // array of rounds; each round is array of matches {p1,p2,c1,c2,winner}
-let results = {
-    players: {},
-    decks: {},
-    playerLosses: {},
-    deckLosses: {}
-};
+  let results = {
+      players: {},
+      decks: {},
+      playerLosses: {},
+      deckLosses: {}
+  };
   let tiebreakers = {
       first: null,
       second: null,
@@ -49,42 +49,42 @@ let results = {
       if (copy.length % 2 === 1) copy.push('BYE');
       return copy;
   };
-const DEFAULT_TOURNAMENT = {
-  "players": [],
-  "decks": [],
-  "tournamentType": "roundrobin",
-  "rounds": [],
-  "results": {
-    "players":  {},
-    "decks": {},
-    "playerLosses":  {},
-    "deckLosses": {}
-  },
-  "tiebreakers": {
-    "first": null,
-    "second": null,
-    "third": null
-  }
-};
+  const DEFAULT_TOURNAMENT = {
+      "players": [],
+      "decks": [],
+      "tournamentType": "roundrobin",
+      "rounds": [],
+      "results": {
+          "players": {},
+          "decks": {},
+          "playerLosses": {},
+          "deckLosses": {}
+      },
+      "tiebreakers": {
+          "first": null,
+          "second": null,
+          "third": null
+      }
+  };
 
-function resetState() {
-    rounds = [];
-    results = {
-        players: {},
-        decks:  {},
-        playerLosses: {},
-        deckLosses:  {}
-    };
-    tiebreakers = {
-        first:  null,
-        second: null,
-        third: null
-    };
-    bracketArea.innerHTML = '';
-    tiebreakerArea.innerHTML = '';
-    updateLeaderboards();
-    renderPlayerView();
-}
+  function resetState() {
+      rounds = [];
+      results = {
+          players: {},
+          decks: {},
+          playerLosses: {},
+          deckLosses: {}
+      };
+      tiebreakers = {
+          first: null,
+          second: null,
+          third: null
+      };
+      bracketArea.innerHTML = '';
+      tiebreakerArea.innerHTML = '';
+      updateLeaderboards();
+      renderPlayerView();
+  }
 
   function addParticipantToState() {
       const raw = (playerInput.value || '').trim();
