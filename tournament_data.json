@@ -14,16 +14,16 @@
     "Patricia Huang"
   ],
   "decks": [
-    "Flappy Blues (Josh 1)",
-    "Kick 'Em to the Curb (Jack 1)",
-    "Does it Resolve? (Andrew 1)",
-    "Grave Robber (Josh 2)",
-    "Elves (Andrew 2)",
-    "Red and Black Equipment (Daryl)",
-    "Creepy Crawlies (Jacob 1)",
-    "Pump It Up (Sean 1)",
-    "Chop Shop (Sean 2)",
-    "Dungeons & Dragons (Jacob 2)",
+    "\"Flappy Blues\" - Josh 1",
+    "\"Kick 'Em to the Curb\" - Jack 1",
+    "\"Does it Resolve?\" - Andrew 1",
+    "\"Grave Robber\" - Josh 2",
+    "\"Elves\" - Andrew 2",
+    "\"Red and Black Equipment\" - Daryl",
+    "\"Creepy Crawlies\" - Jacob 1",
+    "\"Pump It Up\" - Sean 1",
+    "\"Chop Shop\" - Sean 2",
+    "\"Dungeons & Dragons\" - Jacob 2",
     "Trav",
     "Jason Kemichick"
   ],
@@ -33,43 +33,43 @@
       {
         "p1": "Adlai",
         "p2": "Patricia Huang",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Marina",
         "p2": "Alex Zettler",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Sophia Abraham",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Trav",
+        "c1": "Trav",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Rick Pease",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Jason Kemichick",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
         "p2": "Brett",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Garrett",
         "p2": "Maddy Goodman",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -77,43 +77,43 @@
       {
         "p1": "Adlai",
         "p2": "Alex Zettler",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Sophia Abraham",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Marina",
         "p2": "Rick Pease",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Trav",
+        "c1": "Trav",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Brett",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Jason Kemichick",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Maddy Goodman",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
         "p2": "Garrett",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -121,43 +121,43 @@
       {
         "p1": "Adlai",
         "p2": "Sophia Abraham",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "Trav",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Rick Pease",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Brett",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Marina",
         "p2": "Maddy Goodman",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Jason Kemichick",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Garrett",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Kelsey Lumsden",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -165,43 +165,43 @@
       {
         "p1": "Adlai",
         "p2": "Rick Pease",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Brett",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Maddy Goodman",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Garrett",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Jason Kemichick",
+        "c1": "Trav",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Marina",
         "p2": "Kelsey Lumsden",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Kate Kemichick",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -209,43 +209,43 @@
       {
         "p1": "Adlai",
         "p2": "Brett",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Rick Pease",
         "p2": "Maddy Goodman",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Garrett",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Kelsey Lumsden",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Jason Kemichick",
+        "c1": "Trav",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Kate Kemichick",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Marina",
         "p2": "Aaron Saunders",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -253,43 +253,43 @@
       {
         "p1": "Adlai",
         "p2": "Maddy Goodman",
-        "c1": "Creepy Crawlies (Jacob 1)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Brett",
         "p2": "Garrett",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Rick Pease",
         "p2": "Kelsey Lumsden",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Sophia Abraham",
         "p2": "Kate Kemichick",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Jason Kemichick",
+        "c1": "Trav",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Alex Zettler",
         "p2": "Aaron Saunders",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Patricia Huang",
         "p2": "Marina",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       }
     ],
@@ -297,175 +297,175 @@
       {
         "p1": "Adlai",
         "p2": "Garrett",
-        "c1": "Red and Black Equipment (Daryl)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "\"Pump It Up\" - Sean 1",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Maddy Goodman",
         "p2": "Kelsey Lumsden",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
-        "winner": null
-      },
-      {
-        "p1": "Brett",
-        "p2": "Kate Kemichick",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
-        "winner": null
-      },
-      {
-        "p1": "Rick Pease",
-        "p2": "Aaron Saunders",
-        "c1": "Dungeons & Dragons (Jacob 2)",
+        "c1": "\"Grave Robber\" - Josh 2",
         "c2": "Jason Kemichick",
         "winner": null
       },
       {
-        "p1": "Sophia Abraham",
-        "p2": "Marina",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
-        "winner": null
-      },
-      {
-        "p1": "Alex Zettler",
-        "p2": "Patricia Huang",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Creepy Crawlies (Jacob 1)",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
-        "p2": "Kelsey Lumsden",
-        "c1": "Kick 'Em to the Curb (Jack 1)",
-        "c2": "Elves (Andrew 2)",
-        "winner": null
-      },
-      {
-        "p1": "Garrett",
-        "p2": "Kate Kemichick",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
-        "winner": null
-      },
-      {
-        "p1": "Maddy Goodman",
-        "p2": "Aaron Saunders",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
-        "winner": null
-      },
-      {
         "p1": "Brett",
-        "p2": "Marina",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Jason Kemichick",
+        "p2": "Kate Kemichick",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Rick Pease",
-        "p2": "Patricia Huang",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Red and Black Equipment (Daryl)",
-        "winner": null
-      },
-      {
-        "p1": "Sophia Abraham",
-        "p2": "Alex Zettler",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Creepy Crawlies (Jacob 1)",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
-        "p2": "Kate Kemichick",
-        "c1": "Jason Kemichick",
-        "c2": "Elves (Andrew 2)",
-        "winner": null
-      },
-      {
-        "p1": "Kelsey Lumsden",
-        "p2": "Aaron Saunders",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
-        "winner": null
-      },
-      {
-        "p1": "Garrett",
-        "p2": "Marina",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Trav",
-        "winner": null
-      },
-      {
-        "p1": "Maddy Goodman",
-        "p2": "Patricia Huang",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
-        "winner": null
-      },
-      {
-        "p1": "Brett",
-        "p2": "Alex Zettler",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Red and Black Equipment (Daryl)",
-        "winner": null
-      },
-      {
-        "p1": "Rick Pease",
-        "p2": "Sophia Abraham",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Creepy Crawlies (Jacob 1)",
-        "winner": null
-      }
-    ],
-    [
-      {
-        "p1": "Adlai",
         "p2": "Aaron Saunders",
         "c1": "Trav",
-        "c2": "Elves (Andrew 2)",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
-        "p1": "Kate Kemichick",
+        "p1": "Sophia Abraham",
         "p2": "Marina",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Does it Resolve? (Andrew 1)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Alex Zettler",
+        "p2": "Patricia Huang",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Kelsey Lumsden",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
+        "winner": null
+      },
+      {
+        "p1": "Garrett",
+        "p2": "Kate Kemichick",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
+        "winner": null
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Aaron Saunders",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
+        "winner": null
+      },
+      {
+        "p1": "Brett",
+        "p2": "Marina",
+        "c1": "Trav",
+        "c2": "\"Flappy Blues\" - Josh 1",
+        "winner": null
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Patricia Huang",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Pump It Up\" - Sean 1",
+        "winner": null
+      },
+      {
+        "p1": "Sophia Abraham",
+        "p2": "Alex Zettler",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Kate Kemichick",
+        "c1": "\"Flappy Blues\" - Josh 1",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
-        "p2": "Patricia Huang",
-        "c1": "Flappy Blues (Josh 1)",
+        "p2": "Aaron Saunders",
+        "c1": "\"Grave Robber\" - Josh 2",
         "c2": "Jason Kemichick",
         "winner": null
       },
       {
         "p1": "Garrett",
+        "p2": "Marina",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Chop Shop\" - Sean 2",
+        "winner": null
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Patricia Huang",
+        "c1": "Trav",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": null
+      },
+      {
+        "p1": "Brett",
         "p2": "Alex Zettler",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Pump It Up\" - Sean 1",
+        "winner": null
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Sophia Abraham",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": null
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Aaron Saunders",
+        "c1": "\"Chop Shop\" - Sean 2",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
+        "winner": null
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Marina",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "Jason Kemichick",
+        "winner": null
+      },
+      {
+        "p1": "Kelsey Lumsden",
+        "p2": "Patricia Huang",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Flappy Blues\" - Josh 1",
+        "winner": null
+      },
+      {
+        "p1": "Garrett",
+        "p2": "Alex Zettler",
+        "c1": "Trav",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Maddy Goodman",
         "p2": "Sophia Abraham",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       },
       {
         "p1": "Brett",
         "p2": "Rick Pease",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Creepy Crawlies (Jacob 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
         "winner": null
       }
     ],
@@ -473,43 +473,43 @@
       {
         "p1": "Adlai",
         "p2": "Marina",
-        "c1": "Does it Resolve? (Andrew 1)",
-        "c2": "Elves (Andrew 2)",
+        "c1": "Jason Kemichick",
+        "c2": "\"Creepy Crawlies\" - Jacob 1",
         "winner": null
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Patricia Huang",
-        "c1": "Pump It Up (Sean 1)",
-        "c2": "Trav",
+        "c1": "\"Grave Robber\" - Josh 2",
+        "c2": "\"Chop Shop\" - Sean 2",
         "winner": null
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Alex Zettler",
-        "c1": "Flappy Blues (Josh 1)",
-        "c2": "Jason Kemichick",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Flappy Blues\" - Josh 1",
         "winner": null
       },
       {
         "p1": "Kelsey Lumsden",
         "p2": "Sophia Abraham",
-        "c1": "Dungeons & Dragons (Jacob 2)",
-        "c2": "Kick 'Em to the Curb (Jack 1)",
+        "c1": "Trav",
+        "c2": "\"Red and Black Equipment\" - Daryl",
         "winner": null
       },
       {
         "p1": "Garrett",
         "p2": "Rick Pease",
-        "c1": "Chop Shop (Sean 2)",
-        "c2": "Red and Black Equipment (Daryl)",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Pump It Up\" - Sean 1",
         "winner": null
       },
       {
         "p1": "Maddy Goodman",
         "p2": "Brett",
-        "c1": "Grave Robber (Josh 2)",
-        "c2": "Creepy Crawlies (Jacob 1)",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
         "winner": null
       }
     ]
