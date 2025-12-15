@@ -327,91 +327,137 @@
         "p2": "Marina",
         "c1": "\"Kick 'Em to the Curb\" - Jack 1",
         "c2": "\"Grave Robber\" - Josh",
-        "winner": null
+        "winner": "Adlai"
       },
       {
         "p1": "Aaron Saunders",
         "p2": "Ty/Trav/Sean/Jason",
         "c1": "\"Trample\" - Trav",
         "c2": "\"Always Watching\" - Jason",
-        "winner": null
+        "winner": "Ty/Trav/Sean/Jason"
       },
       {
         "p1": "Kate Kemichick",
         "p2": "Patricia / Kelsey",
         "c1": "\"Dungeons & Dragons\" - Jacob 2",
         "c2": "\"Does it Resolve?\" - Andrew 1",
-        "winner": null
+        "winner": "Patricia / Kelsey"
       },
       {
         "p1": "Maddy Goodman",
         "p2": "Alex / Garrett",
         "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
         "c2": "\"Elves\" - Andrew 2",
-        "winner": null
+        "winner": "Alex / Garrett"
       },
       {
         "p1": "Brett",
         "p2": "Rick Pease",
         "c1": "\"Creepy Crawlies\" - Jacob 1",
         "c2": "\"Red and Black Equipment\" - Daryl",
-        "winner": null
+        "winner": "Brett"
       }
     ]
   ],
   "results": {
     "players": {
-      "Brett": 5,
-      "Adlai": 5,
+      "Brett": 6,
+      "Adlai": 6,
       "Marina": 1,
       "Rick Pease": 5,
-      "Alex / Garrett": 6,
+      "Alex / Garrett": 7,
       "Aaron Saunders": 4,
-      "Ty/Trav/Sean/Jason": 3,
+      "Ty/Trav/Sean/Jason": 4,
       "Maddy Goodman": 5,
-      "Patricia / Kelsey": 3,
+      "Patricia / Kelsey": 4,
       "Kate Kemichick": 3
     },
     "decks": {
-      "\"Elves\" - Andrew 2": 7,
+      "\"Elves\" - Andrew 2": 8,
       "\"Trample\" - Trav": 7,
       "\"Dungeons & Dragons\" - Jacob 2": 4,
-      "\"Does it Resolve?\" - Andrew 1": 4,
-      "\"Always Watching\" - Jason": 5,
-      "\"Creepy Crawlies\" - Jacob 1": 4,
+      "\"Does it Resolve?\" - Andrew 1": 5,
+      "\"Always Watching\" - Jason": 6,
+      "\"Creepy Crawlies\" - Jacob 1": 5,
       "\"Grave Robber\" - Josh": 3,
       "\"Pump It Up\" + \"Chop Shop\" - Sean": 2,
-      "\"Kick 'Em to the Curb\" - Jack 1": 3,
+      "\"Kick 'Em to the Curb\" - Jack 1": 4,
       "\"Red and Black Equipment\" - Daryl": 1
     },
     "playerLosses": {
-      "Maddy Goodman": 3,
+      "Maddy Goodman": 4,
       "Ty/Trav/Sean/Jason": 5,
       "Patricia / Kelsey": 5,
-      "Kate Kemichick": 5,
-      "Aaron Saunders": 4,
+      "Kate Kemichick": 6,
+      "Aaron Saunders": 5,
       "Brett": 3,
       "Alex / Garrett": 2,
-      "Marina": 7,
+      "Marina": 8,
       "Adlai": 3,
-      "Rick Pease": 3
+      "Rick Pease": 4
     },
     "deckLosses": {
-      "\"Red and Black Equipment\" - Daryl": 7,
-      "\"Grave Robber\" - Josh": 5,
+      "\"Red and Black Equipment\" - Daryl": 8,
+      "\"Grave Robber\" - Josh": 6,
       "\"Kick 'Em to the Curb\" - Jack 1": 5,
       "\"Creepy Crawlies\" - Jacob 1": 4,
-      "\"Pump It Up\" + \"Chop Shop\" - Sean": 6,
+      "\"Pump It Up\" + \"Chop Shop\" - Sean": 7,
       "\"Does it Resolve?\" - Andrew 1": 4,
-      "\"Dungeons & Dragons\" - Jacob 2": 4,
-      "\"Trample\" - Trav": 1,
+      "\"Dungeons & Dragons\" - Jacob 2": 5,
+      "\"Trample\" - Trav": 2,
       "\"Always Watching\" - Jason": 3,
       "\"Elves\" - Andrew 2": 1
     }
   },
   "tiebreakers": {
-    "first": null,
-    "second": null,
-    "third": null
+    "first": {
+      "players": [
+        "Alex / Garrett"
+      ],
+      "decks": [
+        "\"Elves\" - Andrew 2"
+      ],
+      "rounds": null
+    },
+    "second": {
+      "players": [
+        "Brett",
+        "Adlai"
+      ],
+      "decks": [
+        "\"Trample\" - Trav"
+      ],
+      "rounds": [
+        [
+          {
+            "p1": "Brett",
+            "p2": "Adlai",
+            "c1": "\"Trample\" - Trav",
+            "c2": "No deck",
+            "winner": null
+          }
+        ]
+      ]
+    },
+    "third": {
+      "players": [
+        "Rick Pease",
+        "Maddy Goodman"
+      ],
+      "decks": [
+        "\"Always Watching\" - Jason"
+      ],
+      "rounds": [
+        [
+          {
+            "p1": "Rick Pease",
+            "p2": "Maddy Goodman",
+            "c1": "\"Always Watching\" - Jason",
+            "c2": "No deck",
+            "winner": null
+          }
+        ]
+      ]
+    }
   }
 }
