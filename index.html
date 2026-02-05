@@ -10,12 +10,22 @@
 
 <body>
     <div class="container">
-        <h1>Tournament Bracket Generator</h1>
+        <div class="header-bar">
+            <h1>Tournament Bracket Generator</h1>
+            <div class="auth-controls">
+                <span id="userInfo" style="display:none;"></span>
+                <button id="loginBtn" class="auth-btn">Login</button>
+                <button id="logoutBtn" class="auth-btn" style="display:none;">Logout</button>
+            </div>
+        </div>
         <div id="tabs">
             <button class="tab-btn active" data-tab="tab-notes">Notes & Schedule</button>
             <button class="tab-btn" data-tab="tab-bracket">Bracket View</button>
             <button class="tab-btn" data-tab="tab-player">Player View</button>
             <button class="tab-btn" data-tab="tab-generate">Generate</button>
+            <button class="tab-btn" data-tab="tab-archive">Archive</button>
+            <button class="tab-btn" data-tab="tab-collection">Card Collection</button>
+            <button class="tab-btn" data-tab="tab-deckbuilder">Deck Builder</button>
         </div>
 
         <div class="tab-content active" id="tab-notes">
@@ -262,6 +272,122 @@
 
 
         </div>
+
+        <!-- Archive Tab -->
+        <div class="tab-content" id="tab-archive">
+            <h2>Tournament Archive</h2>
+            <section class="card">
+                <div id="archivedTournamentsList">
+                    <p>Loading archived tournaments...</p>
+                </div>
+            </section>
+            <div id="tournamentDetailsModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div id="tournamentDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Collection Tab -->
+        <div class="tab-content" id="tab-collection">
+            <h2>Card Collection</h2>
+            <section class="card">
+                <div class="controls">
+                    <input type="text" id="cardSearchInput" placeholder="Search cards..." />
+                    <button id="addCardBtn" class="admin-only" style="display:none;">Add New Card</button>
+                </div>
+                <div id="cardCollectionList">
+                    <p>Loading card collection...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Deck Builder Tab -->
+        <div class="tab-content" id="tab-deckbuilder">
+            <h2>Deck Builder</h2>
+            <div id="deckBuilderSection" style="display:none;">
+                <section class="card">
+                    <h3>My Decks</h3>
+                    <div class="controls">
+                        <button id="createNewDeckBtn">Create New Deck</button>
+                    </div>
+                    <div id="myDecksList"></div>
+                </section>
+                
+                <section class="card" id="deckEditorSection" style="display:none;">
+                    <h3>Deck Editor</h3>
+                    <div>
+                        <label>Deck Name: <input type="text" id="deckNameInput" /></label>
+                        <button id="saveDeckBtn">Save Deck</button>
+                        <button id="cancelDeckBtn">Cancel</button>
+                    </div>
+                    <div class="two-col">
+                        <div>
+                            <h4>Available Cards</h4>
+                            <input type="text" id="deckBuilderSearchInput" placeholder="Search..." />
+                            <div id="availableCardsList"></div>
+                        </div>
+                        <div>
+                            <h4>Cards in Deck</h4>
+                            <div id="deckCardsList"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="loginPrompt" style="display:block;">
+                <p>Please log in to build and manage your decks.</p>
+                <button onclick="showAuthModal('login')">Log In</button>
+                <button onclick="showAuthModal('register')">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            
+            <!-- Login Form -->
+            <div id="loginFormSection">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="loginUsername" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="loginPassword" required />
+                    </div>
+                    <div class="error-message" id="loginError"></div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showAuthModal('register'); return false;">Register</a></p>
+            </div>
+
+            <!-- Registration Form -->
+            <div id="registerFormSection" style="display:none;">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="registerUsername" required minlength="3" />
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="registerPassword" required minlength="6" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email (optional):</label>
+                        <input type="email" id="registerEmail" />
+                    </div>
+                    <div class="error-message" id="registerError"></div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showAuthModal('login'); return false;">Login</a></p>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -270,10 +396,14 @@
     </div>
 
     <script src="js/state.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/generate.js"></script>
     <script src="js/tiebreakers.js"></script>
     <script src="js/importExport.js"></script>
+    <script src="js/archive.js"></script>
+    <script src="js/cardCollection.js"></script>
+    <script src="js/deckBuilder.js"></script>
     <script src="js/main.js"></script>
 
     <script>
@@ -292,8 +422,87 @@
                     // activate clicked tab
                     btn.classList.add("active");
                     document.getElementById(target).classList.add("active");
+                    
+                    // Load content for special tabs
+                    if (target === 'tab-archive') {
+                        loadArchivedTournaments();
+                    } else if (target === 'tab-collection') {
+                        loadCardCollection();
+                    } else if (target === 'tab-deckbuilder') {
+                        if (currentUser) {
+                            loadMyDecks();
+                        }
+                    }
                 });
             });
+            
+            // Auth modal handlers
+            const loginBtn = document.getElementById('loginBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const authModal = document.getElementById('authModal');
+            const modalCloses = document.querySelectorAll('.modal-close');
+            
+            if (loginBtn) {
+                loginBtn.addEventListener('click', () => showAuthModal('login'));
+            }
+            
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', async () => {
+                    await logout();
+                    alert('Logged out successfully');
+                });
+            }
+            
+            modalCloses.forEach(close => {
+                close.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+            
+            // Login form handler
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const username = document.getElementById('loginUsername').value;
+                    const password = document.getElementById('loginPassword').value;
+                    const errorEl = document.getElementById('loginError');
+                    
+                    try {
+                        await login(username, password);
+                        hideAuthModal();
+                        alert('Login successful!');
+                    } catch (error) {
+                        errorEl.textContent = error.message;
+                    }
+                });
+            }
+            
+            // Register form handler
+            const registerForm = document.getElementById('registerForm');
+            if (registerForm) {
+                registerForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const username = document.getElementById('registerUsername').value;
+                    const password = document.getElementById('registerPassword').value;
+                    const email = document.getElementById('registerEmail').value;
+                    const errorEl = document.getElementById('registerError');
+                    
+                    try {
+                        await register(username, password, email);
+                        hideAuthModal();
+                        alert('Registration successful!');
+                    } catch (error) {
+                        errorEl.textContent = error.message;
+                    }
+                });
+            }
         });
     </script>
 
