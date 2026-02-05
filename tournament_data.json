@@ -1,0 +1,463 @@
+{
+  "players": [
+    "Adlai",
+    "Marina",
+    "Aaron Saunders",
+    "Kate Kemichick",
+    "Maddy Goodman",
+    "Brett",
+    "Rick Pease",
+    "Alex / Garrett",
+    "Patricia / Kelsey",
+    "Ty/Trav/Sean/Jason"
+  ],
+  "decks": [
+    "\"Grave Robber\" - Josh",
+    "\"Kick 'Em to the Curb\" - Jack 1",
+    "\"Does it Resolve?\" - Andrew 1",
+    "\"Elves\" - Andrew 2",
+    "\"Red and Black Equipment\" - Daryl",
+    "\"Creepy Crawlies\" - Jacob 1",
+    "\"Pump It Up\" + \"Chop Shop\" - Sean",
+    "\"Dungeons & Dragons\" - Jacob 2",
+    "\"Trample\" - Trav",
+    "\"Always Watching\" - Jason"
+  ],
+  "tournamentType": "roundrobin",
+  "rounds": [
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Ty/Trav/Sean/Jason",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Marina",
+        "p2": "Patricia / Kelsey",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Marina"
+      },
+      {
+        "p1": "Aaron Saunders",
+        "p2": "Alex / Garrett",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Alex / Garrett"
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Rick Pease",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Rick Pease"
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Brett",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Brett"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Patricia / Kelsey",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Patricia / Kelsey"
+      },
+      {
+        "p1": "Ty/Trav/Sean/Jason",
+        "p2": "Alex / Garrett",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Ty/Trav/Sean/Jason"
+      },
+      {
+        "p1": "Marina",
+        "p2": "Rick Pease",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Rick Pease"
+      },
+      {
+        "p1": "Aaron Saunders",
+        "p2": "Brett",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Aaron Saunders"
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Maddy Goodman",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Maddy Goodman"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Alex / Garrett",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Patricia / Kelsey",
+        "p2": "Rick Pease",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Rick Pease"
+      },
+      {
+        "p1": "Ty/Trav/Sean/Jason",
+        "p2": "Brett",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Brett"
+      },
+      {
+        "p1": "Marina",
+        "p2": "Maddy Goodman",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Maddy Goodman"
+      },
+      {
+        "p1": "Aaron Saunders",
+        "p2": "Kate Kemichick",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Kate Kemichick"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Rick Pease",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Rick Pease"
+      },
+      {
+        "p1": "Alex / Garrett",
+        "p2": "Brett",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Alex / Garrett"
+      },
+      {
+        "p1": "Patricia / Kelsey",
+        "p2": "Maddy Goodman",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Maddy Goodman"
+      },
+      {
+        "p1": "Ty/Trav/Sean/Jason",
+        "p2": "Kate Kemichick",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Kate Kemichick"
+      },
+      {
+        "p1": "Marina",
+        "p2": "Aaron Saunders",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Aaron Saunders"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Brett",
+        "c1": "\"Red and Black Equipment\" - Daryl",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Brett"
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Maddy Goodman",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Maddy Goodman"
+      },
+      {
+        "p1": "Alex / Garrett",
+        "p2": "Kate Kemichick",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Alex / Garrett"
+      },
+      {
+        "p1": "Patricia / Kelsey",
+        "p2": "Aaron Saunders",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Trample\" - Trav",
+        "winner": "Aaron Saunders"
+      },
+      {
+        "p1": "Ty/Trav/Sean/Jason",
+        "p2": "Marina",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Ty/Trav/Sean/Jason"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Maddy Goodman",
+        "c1": "\"Elves\" - Andrew 2",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Brett",
+        "p2": "Kate Kemichick",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Brett"
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Aaron Saunders",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Rick Pease"
+      },
+      {
+        "p1": "Alex / Garrett",
+        "p2": "Marina",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Alex / Garrett"
+      },
+      {
+        "p1": "Patricia / Kelsey",
+        "p2": "Ty/Trav/Sean/Jason",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": "Patricia / Kelsey"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Kate Kemichick",
+        "c1": "\"Does it Resolve?\" - Andrew 1",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Aaron Saunders",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Aaron Saunders"
+      },
+      {
+        "p1": "Brett",
+        "p2": "Marina",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Brett"
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Ty/Trav/Sean/Jason",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Ty/Trav/Sean/Jason"
+      },
+      {
+        "p1": "Alex / Garrett",
+        "p2": "Patricia / Kelsey",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": "Alex / Garrett"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Aaron Saunders",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Marina",
+        "c1": "\"Always Watching\" - Jason",
+        "c2": "\"Kick 'Em to the Curb\" - Jack 1",
+        "winner": "Kate Kemichick"
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Ty/Trav/Sean/Jason",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Maddy Goodman"
+      },
+      {
+        "p1": "Brett",
+        "p2": "Patricia / Kelsey",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Patricia / Kelsey"
+      },
+      {
+        "p1": "Rick Pease",
+        "p2": "Alex / Garrett",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": "Alex / Garrett"
+      }
+    ],
+    [
+      {
+        "p1": "Adlai",
+        "p2": "Marina",
+        "c1": "\"Kick 'Em to the Curb\" - Jack 1",
+        "c2": "\"Grave Robber\" - Josh",
+        "winner": "Adlai"
+      },
+      {
+        "p1": "Aaron Saunders",
+        "p2": "Ty/Trav/Sean/Jason",
+        "c1": "\"Trample\" - Trav",
+        "c2": "\"Always Watching\" - Jason",
+        "winner": "Ty/Trav/Sean/Jason"
+      },
+      {
+        "p1": "Kate Kemichick",
+        "p2": "Patricia / Kelsey",
+        "c1": "\"Dungeons & Dragons\" - Jacob 2",
+        "c2": "\"Does it Resolve?\" - Andrew 1",
+        "winner": "Patricia / Kelsey"
+      },
+      {
+        "p1": "Maddy Goodman",
+        "p2": "Alex / Garrett",
+        "c1": "\"Pump It Up\" + \"Chop Shop\" - Sean",
+        "c2": "\"Elves\" - Andrew 2",
+        "winner": "Alex / Garrett"
+      },
+      {
+        "p1": "Brett",
+        "p2": "Rick Pease",
+        "c1": "\"Creepy Crawlies\" - Jacob 1",
+        "c2": "\"Red and Black Equipment\" - Daryl",
+        "winner": "Brett"
+      }
+    ]
+  ],
+  "results": {
+    "players": {
+      "Brett": 6,
+      "Adlai": 6,
+      "Marina": 1,
+      "Rick Pease": 5,
+      "Alex / Garrett": 7,
+      "Aaron Saunders": 4,
+      "Ty/Trav/Sean/Jason": 4,
+      "Maddy Goodman": 5,
+      "Patricia / Kelsey": 4,
+      "Kate Kemichick": 3
+    },
+    "decks": {
+      "\"Elves\" - Andrew 2": 8,
+      "\"Trample\" - Trav": 7,
+      "\"Dungeons & Dragons\" - Jacob 2": 4,
+      "\"Does it Resolve?\" - Andrew 1": 5,
+      "\"Always Watching\" - Jason": 6,
+      "\"Creepy Crawlies\" - Jacob 1": 5,
+      "\"Grave Robber\" - Josh": 3,
+      "\"Pump It Up\" + \"Chop Shop\" - Sean": 2,
+      "\"Kick 'Em to the Curb\" - Jack 1": 4,
+      "\"Red and Black Equipment\" - Daryl": 1
+    },
+    "playerLosses": {
+      "Maddy Goodman": 4,
+      "Ty/Trav/Sean/Jason": 5,
+      "Patricia / Kelsey": 5,
+      "Kate Kemichick": 6,
+      "Aaron Saunders": 5,
+      "Brett": 3,
+      "Alex / Garrett": 2,
+      "Marina": 8,
+      "Adlai": 3,
+      "Rick Pease": 4
+    },
+    "deckLosses": {
+      "\"Red and Black Equipment\" - Daryl": 8,
+      "\"Grave Robber\" - Josh": 6,
+      "\"Kick 'Em to the Curb\" - Jack 1": 5,
+      "\"Creepy Crawlies\" - Jacob 1": 4,
+      "\"Pump It Up\" + \"Chop Shop\" - Sean": 7,
+      "\"Does it Resolve?\" - Andrew 1": 4,
+      "\"Dungeons & Dragons\" - Jacob 2": 5,
+      "\"Trample\" - Trav": 2,
+      "\"Always Watching\" - Jason": 3,
+      "\"Elves\" - Andrew 2": 1
+    }
+  },
+  "tiebreakers": {
+    "first": {
+      "players": [
+        "Alex / Garrett"
+      ],
+      "decks": [
+        "\"Elves\" - Andrew 2"
+      ],
+      "rounds": null
+    },
+    "second": {
+      "players": [
+        "Brett",
+        "Adlai"
+      ],
+      "decks": [
+        "\"Trample\" - Trav"
+      ],
+      "rounds": [
+        [
+          {
+            "p1": "Brett",
+            "p2": "Adlai",
+            "c1": "\"Trample\" - Trav",
+            "c2": "No deck",
+            "winner": null
+          }
+        ]
+      ]
+    },
+    "third": {
+      "players": [
+        "Rick Pease",
+        "Maddy Goodman"
+      ],
+      "decks": [
+        "\"Always Watching\" - Jason"
+      ],
+      "rounds": [
+        [
+          {
+            "p1": "Rick Pease",
+            "p2": "Maddy Goodman",
+            "c1": "\"Always Watching\" - Jason",
+            "c2": "No deck",
+            "winner": null
+          }
+        ]
+      ]
+    }
+  }
+}

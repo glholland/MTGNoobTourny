@@ -1,94 +1,512 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <title>Tournament Bracket Generator (Standalone)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <title>Tournament Bracket Generator (Standalone)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Tournament Bracket Generator</h1>
-
-    <section class="row">
-      <div class="card">
-        <h2>Import / Export</h2>
-        <div class="controls">
-          <button id="exportBtn">Export Bracket</button>
-          <input id="importFile" type="file" accept="application/json">
+    <div class="container">
+        <div class="header-bar">
+            <h1>Tournament Bracket Generator</h1>
+            <div class="auth-controls">
+                <span id="userInfo" style="display:none;"></span>
+                <button id="loginBtn" class="auth-btn">Login</button>
+                <button id="logoutBtn" class="auth-btn" style="display:none;">Logout</button>
+            </div>
         </div>
-      </div>
-<!-- comment -->
-      <div class="card">
-        <h2>Sets</h2>
-        <div class="two-col">
-          <div>
-            <h3>Players (<span id="playerCount">0</span>)</h3>
-            <textarea id="playerInput" placeholder="Paste players here, one per line"></textarea>
-            <button id="addPlayerBtn">Add</button>
-            <ul id="playersList"></ul>
-          </div>
-          <div>
-            <h3>Decks (<span id="deckCount">0</span>)</h3>
-            <textarea id="deckInput" placeholder="Paste decks here, one per line"></textarea>
-            <button id="adddeckBtn">Add</button>
-            <ul id="decksList"></ul>
-          </div>
+        <div id="tabs">
+            <button class="tab-btn active" data-tab="tab-notes">Notes & Schedule</button>
+            <button class="tab-btn" data-tab="tab-bracket">Bracket View</button>
+            <button class="tab-btn" data-tab="tab-player">Player View</button>
+            <button class="tab-btn" data-tab="tab-generate">Generate</button>
+            <button class="tab-btn" data-tab="tab-archive">Archive</button>
+            <button class="tab-btn" data-tab="tab-collection">Card Collection</button>
+            <button class="tab-btn" data-tab="tab-deckbuilder">Deck Builder</button>
         </div>
-      </div>
 
-      <div class="card">
-        <h2>Options</h2>
-        <label>
-          Tournament type:
-          <select id="tournamentType">
-            <option value="single">Single Elimination</option>
-            <option value="double">Double Elimination (not fully supported)</option>
-            <option value="roundrobin">Round Robin</option>
-          </select>
-        </label>
-        <div class="controls">
-          <button id="generateBtn">Generate Tournament</button>
-          <button id="resetBtn">Reset</button>
+        <div class="tab-content active" id="tab-notes">
+
+            <div class="card">
+                <h2>Tournament Notes</h2>
+
+                <div id="notesBox" class="tourney-notes">
+
+                    <p class="intro">
+                        Hello all! I purchased 7,000 bulk Magic The Gathering cards and want to host shit.
+                    </p>
+					<div class="notes-section">
+						<h3>Future Tournament Ideas</h3>
+						<p>Choose from one of our exciting tournament formats!  All decks must be built using bulk common/uncommon cards provided at the event.</p>
+						
+						<div class="format-option">
+							<h4>Format 1: The Role Reversal (40-Card)</h4>
+							<ul>
+								<li><strong>Deck Building:</strong> Same as we did before, but reversed. Inexperienced players construct 40-card decks for veteran players to pilot.</li>
+							</ul>
+						</div>
+
+						<div class="format-option">
+							<h4>Format 2: Big or Small (40 or 60-Card)</h4>
+							<ul>
+								<li><strong>Deck Building:</strong> All players build their own decks from the available card pool. Choose between a focused 40-card or larger 60-card deck to outlast your 40-card opponents. </li>
+							</ul>
+						</div>
+
+						<div class="format-option">
+							<h4>Format 3: Commander Chaos (50-Card)</h4>
+							<ul>
+								<li><strong>Deck Building:</strong> All players build their own decks. Bring your own Commander (no restrictions!) and build a 50-card deck (including your Commander) using the bulk card pool.</li>
+								<li><strong>Deck Building Rules:</strong> 
+									<ul>
+										<li>1 Commander from any genuine card in the world</li>
+										<li>49 additional cards from bulk commons/uncommons (including lands)</li>
+										<li>Color identity rule - You can ONLY use cards that match ANY color on your commander card</li>
+										<li>No duplicate cards, except basic lands</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<div class="format-option">
+							<h4>Format 4: Double Commander Mayhem (60-Card, Duplicates Allowed)</h4>
+							<ul>
+								<li><strong>Deck Building:</strong> All players build their own decks. Choose TWO Commanders (from my bulk) and build 60-card deck. Duplicate cards allowed.</li>
+								<li><strong>Deck Building Rules:</strong> 
+									<ul>
+										<li>2 Commanders from my bulk</li>
+										<li>58 additional cards from bulk commons/uncommons (including lands)</li>
+										<li>Color identity rule - You can ONLY use cards that match ANY color on your commander card</li>
+										<li>Duplicate cards allowed (quantity TBD, somewhere between 2x and 4x)</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+                    <div class="notes-section">
+                        <h3>How the Event Works</h3>
+                        <ul>
+                            <li><strong>Step 1:</strong> Strong MTG players will <strong>Draft</strong> or <strong>Timed Free-Build</strong> one Standard deck using the bulk.</li>
+                            <li><strong>Step 2:</strong> New / low-skill MTG players will play those decks in a <strong>Round Robin tournament</strong>.
+                                Decks are randomized each round as evenly as possible.</li>
+                            <li><strong>Scoring:</strong>
+                                <ul>
+                                    <li>Builders earn <strong>1 point for every tournament win their deck achieves</strong>.</li>
+                                    <li>Players earn <strong>1 point per match win</strong>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="notes-section">
+                        <h3>Prize Pools</h3>
+
+                        <h4>New Players</h4>
+                        <ul>
+                            <li><strong>1st:</strong> Choose any built deck + MTG Starter Kit</li>
+                            <li><strong>2nd:</strong> Choose any remaining built deck</li>
+                        </ul>
+
+                        <h4>Builders</h4>
+                        <ul>
+                            <li><strong>1st & 2nd:</strong> A bottle of booze or MTG prize (TBD)</li>
+                        </ul>
+
+                        <p class="subnote">
+                            All built decks can be purchased afterward for <strong>$10</strong> (negotiable).
+                            All money goes toward funding this and future tournaments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h2>Schedule of Events</h2>
+                <div id="scheduleBox" class="schedule-list">
+                    <div class="schedule-item">
+                        <span class="schedule-time">11:45 AM -> 12:30 PM</span>
+                        <span class="schedule-desc">Lite Lunch + Deck Building for those that missed Wednesday</span>
+                    </div>
+
+                    <div class="schedule-item">
+                        <span class="schedule-time">12:30 PM –> 12:40 PM</span>
+                        <span class="schedule-desc">Rules Overview</span>
+                    </div>
+
+                    <div class="schedule-item">
+                        <span class="schedule-time">12:40 PM –> 2:30 PM</span>
+                        <span class="schedule-desc">Rounds 1–5</span>
+                    </div>
+
+                    <div class="schedule-item">
+                        <span class="schedule-time">2:30 PM</span>
+                        <span class="schedule-desc">Snack Break if you want it</span>
+                    </div>
+
+                    <div class="schedule-item">
+                        <span class="schedule-time">2:30 PM –> 5:00 PM</span>
+                        <span class="schedule-desc">Rounds 6-11</span>
+                    </div>
+
+                    <div class="schedule-item">
+                        <span class="schedule-time">5:00 PM</span>
+                        <span class="schedule-desc">Tiebreakers & Awards</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </section>
 
-    <section id="bracketArea"></section>
 
-    <section class="card">
-      <h2>Player View</h2>
-      <label>
-        Select player:
-        <select id="playerViewSelect"><option value="">-- choose --</option></select>
-      </label>
-      <div id="playerOpponents"></div>
-    </section>
 
-    <section class="card">
-      <h2>Leaderboards</h2>
-      <div class="two-col">
-        <div>
-          <h3>Players</h3>
-          <ol id="playerLeaderboard"></ol>
+        <div class="tab-content" id="tab-bracket">
+            <h2>Tournament Bracket</h2>
+
+            <section id="bracketArea"></section>
+            <section class="card">
+                <h2>Leaderboards</h2>
+                <div class="two-col">
+                    <div>
+                        <h3>Players</h3>
+                        <ol id="playerLeaderboard"></ol>
+                    </div>
+                    <div>
+                        <h3>Decks</h3>
+                        <ol id="deckLeaderboard"></ol>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="generateTiebreakersBtn">Generate Tiebreakers (1st/2nd/3rd)</button>
+                </div>
+            </section>
+			<section id="tiebreakerArea"></section>
         </div>
-        <div>
-          <h3>Decks</h3>
-          <ol id="deckLeaderboard"></ol>
-        </div>
-      </div>
-      <div class="controls">
-        <button id="generateTiebreakersBtn">Generate Tiebreakers (1st/2nd/3rd)</button>
-      </div>
-    </section>
+		
+        <div class="tab-content" id="tab-player">
 
-    <section id="tiebreakerArea"></section>
+            <h2>View Tournament From Player Perspective</h2>
+            <section class="card">
+                <h2>Player View</h2>
+                <label>
+                    Select player:
+                    <select id="playerViewSelect">
+                        <option value="">-- choose --</option>
+                    </select>
+                </label>
+                <div id="playerOpponents"></div>
+            </section>
+
+            <section class="card">
+                <h2>Leaderboards</h2>
+                <div class="two-col">
+                    <div>
+                        <h3>Players</h3>
+                        <ol id="playerLeaderboard"></ol>
+                    </div>
+                    <div>
+                        <h3>Decks</h3>
+                        <ol id="deckLeaderboard"></ol>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="generateTiebreakersBtn">Generate Tiebreakers (1st/2nd/3rd)</button>
+                </div>
+            </section>
+			<section id="tiebreakerArea"></section>
+        </div>
+		
+        <div class="tab-content" id="tab-generate">
+            <section class="row">
+                <div class="card">
+                    <h2>Import / Export</h2>
+                    <div class="controls">
+                        <button id="exportBtn">Export Bracket</button>
+                        <input id="importFile" type="file" accept="application/json">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Sets</h2>
+                    <div class="two-col">
+                        <div>
+                            <h3>Players (<span id="playerCount">0</span>)</h3>
+                            <textarea id="playerInput" placeholder="Paste players here, one per line"></textarea>
+                            <button id="addPlayerBtn">Add</button>
+                            <div id="playerList"></div>
+                        </div>
+                        <div>
+                            <h3>Decks (<span id="deckCount">0</span>)</h3>
+                            <textarea id="deckInput" placeholder="Paste decks here, one per line"></textarea>
+                            <button id="adddeckBtn">Add</button>
+                            <div id="deckList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Options</h2>
+                    <label>
+                        Tournament type:
+                        <select id="tournamentType">
+                            <option value="single">Single Elimination</option>
+                            <option value="double">Double Elimination (not fully supported)</option>
+                            <option value="roundrobin">Round Robin</option>
+                        </select>
+                    </label>
+                    <div class="controls">
+                        <button id="generateBtn">Generate Tournament</button>
+                        <button id="resetBtn">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <div class="card">
+                <h3>Deck Usage Matrix</h3>
+                <div id="deckMatrix"></div>
+            </div>
+
+
+        </div>
+
+        <!-- Archive Tab -->
+        <div class="tab-content" id="tab-archive">
+            <h2>Tournament Archive</h2>
+            <section class="card">
+                <div id="archivedTournamentsList">
+                    <p>Loading archived tournaments...</p>
+                </div>
+            </section>
+            <div id="tournamentDetailsModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div id="tournamentDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Collection Tab -->
+        <div class="tab-content" id="tab-collection">
+            <h2>Card Collection</h2>
+            <section class="card">
+                <div class="controls">
+                    <input type="text" id="cardSearchInput" placeholder="Search cards..." />
+                    <button id="addCardBtn" class="admin-only" style="display:none;">Add New Card</button>
+                </div>
+                <div id="cardCollectionList">
+                    <p>Loading card collection...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Deck Builder Tab -->
+        <div class="tab-content" id="tab-deckbuilder">
+            <h2>Deck Builder</h2>
+            <div id="deckBuilderSection" style="display:none;">
+                <section class="card">
+                    <h3>My Decks</h3>
+                    <div class="controls">
+                        <button id="createNewDeckBtn">Create New Deck</button>
+                    </div>
+                    <div id="myDecksList"></div>
+                </section>
+                
+                <section class="card" id="deckEditorSection" style="display:none;">
+                    <h3>Deck Editor</h3>
+                    <div>
+                        <label>Deck Name: <input type="text" id="deckNameInput" /></label>
+                        <button id="saveDeckBtn">Save Deck</button>
+                        <button id="cancelDeckBtn">Cancel</button>
+                    </div>
+                    <div class="two-col">
+                        <div>
+                            <h4>Available Cards</h4>
+                            <input type="text" id="deckBuilderSearchInput" placeholder="Search..." />
+                            <div id="availableCardsList"></div>
+                        </div>
+                        <div>
+                            <h4>Cards in Deck</h4>
+                            <div id="deckCardsList"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="loginPrompt" style="display:block;">
+                <p>Please log in to build and manage your decks.</p>
+                <button onclick="showAuthModal('login')">Log In</button>
+                <button onclick="showAuthModal('register')">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            
+            <!-- Login Form -->
+            <div id="loginFormSection">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="loginUsername" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="loginPassword" required />
+                    </div>
+                    <div class="error-message" id="loginError"></div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showAuthModal('register'); return false;">Register</a></p>
+            </div>
+
+            <!-- Registration Form -->
+            <div id="registerFormSection" style="display:none;">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="registerUsername" required minlength="3" />
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="registerPassword" required minlength="6" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email (optional):</label>
+                        <input type="email" id="registerEmail" />
+                    </div>
+                    <div class="error-message" id="registerError"></div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showAuthModal('login'); return false;">Login</a></p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-      Built for local use — double-click index.html to open. Styles in styles.css.
+        Hello you shitting bastards, this footer is useless.
     </footer>
-  </div>
+    </div>
 
-  <script src="app.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/generate.js"></script>
+    <script src="js/tiebreakers.js"></script>
+    <script src="js/importExport.js"></script>
+    <script src="js/archive.js"></script>
+    <script src="js/cardCollection.js"></script>
+    <script src="js/deckBuilder.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabButtons = document.querySelectorAll(".tab-btn");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const target = btn.dataset.tab;
+
+                    // deactivate all tabs
+                    tabButtons.forEach(b => b.classList.remove("active"));
+                    tabContents.forEach(c => c.classList.remove("active"));
+
+                    // activate clicked tab
+                    btn.classList.add("active");
+                    document.getElementById(target).classList.add("active");
+                    
+                    // Load content for special tabs
+                    if (target === 'tab-archive') {
+                        loadArchivedTournaments();
+                    } else if (target === 'tab-collection') {
+                        loadCardCollection();
+                    } else if (target === 'tab-deckbuilder') {
+                        if (currentUser) {
+                            loadMyDecks();
+                        }
+                    }
+                });
+            });
+            
+            // Auth modal handlers
+            const loginBtn = document.getElementById('loginBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const authModal = document.getElementById('authModal');
+            const modalCloses = document.querySelectorAll('.modal-close');
+            
+            if (loginBtn) {
+                loginBtn.addEventListener('click', () => showAuthModal('login'));
+            }
+            
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', async () => {
+                    await logout();
+                    alert('Logged out successfully');
+                });
+            }
+            
+            modalCloses.forEach(close => {
+                close.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+            
+            // Login form handler
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const username = document.getElementById('loginUsername').value;
+                    const password = document.getElementById('loginPassword').value;
+                    const errorEl = document.getElementById('loginError');
+                    
+                    try {
+                        await login(username, password);
+                        hideAuthModal();
+                        alert('Login successful!');
+                    } catch (error) {
+                        errorEl.textContent = error.message;
+                    }
+                });
+            }
+            
+            // Register form handler
+            const registerForm = document.getElementById('registerForm');
+            if (registerForm) {
+                registerForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const username = document.getElementById('registerUsername').value;
+                    const password = document.getElementById('registerPassword').value;
+                    const email = document.getElementById('registerEmail').value;
+                    const errorEl = document.getElementById('registerError');
+                    
+                    try {
+                        await register(username, password, email);
+                        hideAuthModal();
+                        alert('Registration successful!');
+                    } catch (error) {
+                        errorEl.textContent = error.message;
+                    }
+                });
+            }
+        });
+    </script>
+
+
 </body>
+
 </html>

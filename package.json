@@ -1,0 +1,31 @@
+{
+  "name": "mtg-noob-tourny",
+  "version": "1.0.0",
+  "description": "MTG Tournament Management System with Card Collection Tracking",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node scripts/initDb.js",
+    "seed-db": "node scripts/seedDb.js"
+  },
+  "keywords": [
+    "mtg",
+    "tournament",
+    "magic-the-gathering"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "express-session": "^1.17.3",
+    "dotenv": "^16.3.1",
+    "better-sqlite3": "^11.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
